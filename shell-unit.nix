@@ -1,0 +1,34 @@
+{...}: {
+  programs = {
+    zoxide = {
+      enable = true;
+      options = ["--cmd cd"];
+    };
+    eza = {
+      enable = true;
+      icons = "auto";
+      git = true;
+    };
+    bat.enable = true;
+    fd = {
+      enable = true;
+      hidden = true;
+      extraOptions = [
+        "--exclude"
+        ".git"
+      ];
+    };
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
+  };
+
+  # 必要に応じてエイリアスを設定
+  home.shellAliases = {
+    ls = "eza";
+    ll = "eza -l";
+    la = "eza -a";
+    cat = "bat";
+  };
+}

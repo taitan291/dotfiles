@@ -59,7 +59,7 @@
 
   imports = [
     ./nvim
-    ./emacs
+    #./emacs
     ./code
     ./waybar
     ./starship

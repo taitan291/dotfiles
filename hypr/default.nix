@@ -12,6 +12,7 @@
       dunst
       fastfetch
       brightnessctl #画面高度
+			plymouth #grub系アニメーション
     ];
     file = {
       "Pictures/Screenshots/.keep".text = "";

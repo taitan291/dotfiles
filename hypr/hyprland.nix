@@ -6,7 +6,7 @@
     ];
     settings = {
       monitor = [
-        "eDP-1, 1920x1200@59.95, 0x0, 1"
+        #"eDP-1, 1920x1200@59.95, 0x0, 1"
         ",preferred,auto,1"
       ];
 
@@ -140,8 +140,8 @@
         "$mainMod SHIFT, L, exec, hyprlock"
 
         # フォーカス移動
-        "$mainMod, L, movefocus, l"
-        "$mainMod, H, movefocus, r"
+        "$mainMod, H, movefocus, l"
+        "$mainMod, L, movefocus, r"
         "$mainMod, K, movefocus, u"
         "$mainMod, J, movefocus, d"
 

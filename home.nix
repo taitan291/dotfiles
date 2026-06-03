@@ -25,6 +25,8 @@
       wine
 
       librsvg
+
+			prismlauncher
     ];
 
     sessionVariables = {

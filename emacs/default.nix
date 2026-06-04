@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{pkgs, config, ...}:
+let
+	dotfilesPath = "${config.home.homeDirectory}/nixos";
+in
+{
   programs.emacs = {
     enable = true;
     package = pkgs.emacs-unstable-pgtk;
@@ -16,8 +20,8 @@
   };
   home = {
     file = {
-      ".emacs.d/conf".source = ./conf;
-      ".emacs.d/init.el".source = ./init.el;
+      ".emacs.d/conf".source = config.lib.file.mkOutOfStoreSymlink ".${dotfilesPath}/emacs/conf";
+      ".emacs.d/init.el".source = config.lib.file.mkOutOfStoreSymlink ".${dotfilesPath}/emacs/init.el";
     };
     packages = with pkgs; [
       #typst

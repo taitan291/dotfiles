@@ -61,7 +61,7 @@
 
   imports = [
     ./nvim
-    #./emacs
+    ./emacs
     ./code
     ./waybar
     ./starship
@@ -70,6 +70,7 @@
     ./git.nix
     ./bash.nix
     ./hypr
+    ./wezterm
     ./fcitx5
     ./shell-unit.nix
     ./lang.nix

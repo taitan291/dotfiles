@@ -10,22 +10,11 @@
       [[ -f ~/.bashrc ]] && source ~/.bashrc
     '';
     bashrcExtra = ''
-         # tab補完
-         complete -f -X '*.pdf' nvim emacs vim
-         complete -f -X '*.typ' xdg-open
-
-      rebuild() {
-      	if [ "$1" = "-d" ]; then
-      		echo "Running desktop rebuild..."
-      		nixos-rebuild switch --flake ~/.config/nixos/.#desktop
-      	elif [ "$1" = "-l" ]; then
-      		echo "Running laptop rebuild..."
-      		nixos-rebuild switch --flake ~/.config/nixos/.#laptop
-      	else
-      		echo "Usage: rebuild [-d|-l]" >&2
-      		return 1
-      	fi
-      }
+      editors=(nvim emacs)
+      # tab補完
+      complete -f -X '*.pdf' "''${editors[@]}"
+      complete -f -X '*.lock' "''${editors[@]}"
+      complete -f -X '*.typ' xdg-open
     '';
   };
 }

@@ -1,8 +1,10 @@
-{pkgs, config, ...}:
-let
-	dotfilesPath = "${config.home.homeDirectory}/nixos";
-in
 {
+  pkgs,
+  config,
+  ...
+}: let
+  dotfilesPath = "${config.home.homeDirectory}/nixos";
+in {
   programs.emacs = {
     enable = true;
     package = pkgs.emacs-unstable-pgtk;

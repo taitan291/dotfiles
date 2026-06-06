@@ -1,1 +1,1 @@
-config.color_scheme = 'Catppuccin Mocha'
+config.color_scheme = "Catppuccin Mocha"

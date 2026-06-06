@@ -1,12 +1,12 @@
 {pkgs, ...}: {
   wayland.windowManager.hyprland = {
     enable = true;
+		configType = "hyprlang";
     plugins = [
-      pkgs.hyprlandPlugins.hypr-dynamic-cursors
+      #pkgs.hyprlandPlugins.hypr-dynamic-cursors
     ];
     settings = {
       monitor = [
-        #"eDP-1, 1920x1200@59.95, 0x0, 1"
         ",preferred,auto,1"
       ];
 
@@ -18,6 +18,8 @@
       "$hyprshot" = "/home/taitan/Pictures/Screenshots";
 
       exec-once = [
+"dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP HYPRLAND_INSTANCE_SIGNATURE"
+"systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "nm-applet"
         "dunst"
         "waybar"
@@ -27,9 +29,13 @@
         "hyprpaper"
       ];
       env = [
-        #fcitx5
+        # fcitx5
         "QT_IM_MODULE,fcitx"
         "XMODIFIERS,@im=fcitx"
+				# hyprland
+				"XDG_SESSION_TYPE,wayland"
+        "XDG_SESSION_DESKTOP,Hyprland"
+        "XDG_CURRENT_DESKTOP,Hyprland"
       ];
 
       # 一般設定
@@ -96,7 +102,7 @@
       };
       # レイアウト
       dwindle = {
-        pseudotile = true;
+        #pseudotile = true;
         preserve_split = true;
       };
       # その他
@@ -108,7 +114,7 @@
       # 入力設定
       input = {
         kb_layout = "jp";
-        kb_variant = "106";
+        kb_variant = "";
         kb_rules = "evdev";
         kb_options = "ctrl:nocaps";
         follow_mouse = 1;
@@ -118,14 +124,8 @@
         };
       };
 
-      #ジェスチャー
-      gestures = {
-        #workspace_swipe = true;
-        #workspace_swipe_fingers = 3;
+      windowrulev2 = {
       };
-			windowrulev2 = {
-
-			};
 
       #キーバインド
       bind = [
@@ -137,7 +137,7 @@
         "$mainMod, V, togglefloating,"
         "$mainMod, R, exec, $menu"
         "$mainMod, P, pseudo,"
-        "$mainMod, J, togglesplit,"
+        "$mainMod SHIFT, J, layoutmsg, togglesplit"
         "$mainMod, B, exec, $browser"
         "$mainMod, M, exec, missioncenter"
         "$mainMod SHIFT, L, exec, hyprlock"

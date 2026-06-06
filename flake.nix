@@ -1,22 +1,27 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
 
     # Home-manager
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
-
+    /*
+     nixos-wsl = {
+    url = "github:nix-community/NixOS-WSL";
+       inputs.nixpkgs.follows = "nixpkgs";
+     };
+    */
     # Hyprland
     hyprland.url = "github:hyprwm/Hyprland";
+		/*
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
-
+		*/
     #	Rust
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
@@ -30,7 +35,10 @@
     };
 
     # Emacs
-    emacs-overlay.url = "github:nix-community/emacs-overlay";
+    emacs-overlay = {
+      url = "github:nix-community/emacs-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Formatter
     treefmt-nix = {

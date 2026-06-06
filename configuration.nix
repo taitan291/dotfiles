@@ -33,11 +33,22 @@
 
   services.xserver = {
     enable = true;
+		displayManager.lightdm.enable = false;
     xkb = {
       layout = "jp";
       variant = "106";
       options = "ctrl:nocaps";
     };
+  };
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = false;
+    # theme = "sddm-sugar-dark";
+  };
+
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
   };
 
   #font
@@ -67,13 +78,17 @@
     extraGroups = [
       "wheel"
       "networkmanager"
+			"input"
+			"video"
     ];
     shell = pkgs.bash;
     home = "/home/taitan";
   };
 
-  # HDMIオーディオ用ファームウェアの追加
-  hardware.enableAllFirmware = true;
+  hardware = {
+		enableAllFirmware = true;
+		graphics.enable = true;
+	};
   services.udev.extraRules = ''
     # HDMIの抜き差し検知を安定させるためのルール（必要に応じて）
     ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x040300", ATTR{remove}="0"
@@ -140,9 +155,7 @@
       os-prober
     ];
   };
-  programs.hyprland = {
-    enable = true;
-  };
+
   programs.dconf.enable = true;
 
   networking.hostName = "nixos";

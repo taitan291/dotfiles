@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   wayland.windowManager.hyprland = {
     enable = true;
-		configType = "hyprlang";
+    configType = "hyprlang";
     plugins = [
       #pkgs.hyprlandPlugins.hypr-dynamic-cursors
     ];
@@ -18,8 +18,8 @@
       "$hyprshot" = "/home/taitan/Pictures/Screenshots";
 
       exec-once = [
-"dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP HYPRLAND_INSTANCE_SIGNATURE"
-"systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP HYPRLAND_INSTANCE_SIGNATURE"
+        "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "nm-applet"
         "dunst"
         "waybar"
@@ -32,8 +32,8 @@
         # fcitx5
         "QT_IM_MODULE,fcitx"
         "XMODIFIERS,@im=fcitx"
-				# hyprland
-				"XDG_SESSION_TYPE,wayland"
+        # hyprland
+        "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
         "XDG_CURRENT_DESKTOP,Hyprland"
       ];

@@ -2,8 +2,8 @@
   programs.bash = {
     enable = true;
     shellAliases = {
-      rebuild = "sudo nixos-rebuild switch --flake ~/.config/nixos/.#laptos";
       sl = "ls && sl";
+      lgit = "lazygit";
     };
     profileExtra = ''
       # ログインシェルでも.bashrcを読み込む

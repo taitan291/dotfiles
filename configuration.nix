@@ -33,7 +33,7 @@
 
   services.xserver = {
     enable = true;
-		displayManager.lightdm.enable = false;
+    displayManager.lightdm.enable = false;
     xkb = {
       layout = "jp";
       variant = "106";
@@ -78,17 +78,17 @@
     extraGroups = [
       "wheel"
       "networkmanager"
-			"input"
-			"video"
+      "input"
+      "video"
     ];
     shell = pkgs.bash;
     home = "/home/taitan";
   };
 
   hardware = {
-		enableAllFirmware = true;
-		graphics.enable = true;
-	};
+    enableAllFirmware = true;
+    graphics.enable = true;
+  };
   services.udev.extraRules = ''
     # HDMIの抜き差し検知を安定させるためのルール（必要に応じて）
     ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x040300", ATTR{remove}="0"

@@ -25,10 +25,12 @@
   };
 
   # 必要に応じてエイリアスを設定
-  home.shellAliases = {
-    ls = "eza";
-    ll = "eza -l";
-    la = "eza -a";
-    cat = "bat";
-  };
-}
+  home = {
+		shellAliases = {
+			ls = "eza";
+			ll = "eza -l";
+			la = "eza -a";
+			cat = "bat";
+		};
+	};
+}	

@@ -1,0 +1,28 @@
+{ pkgs, ... }: {
+	home = {
+    stateVersion = "25.11";
+    username = "taitan";
+    homeDirectory = "/home/taitan";
+	};
+  imports = [
+    ./packages.nix
+    ./file.nix
+    ./xdg.nix
+    ./programs.nix
+
+    ./nvim
+    ./emacs
+    ./code
+    ./waybar
+    ./starship
+    ./file-manager/yazi.nix
+    ./file-manager/thunar.nix
+    ./git.nix
+    ./bash.nix
+    ./hypr
+    ./wezterm
+    ./fcitx5
+    ./shell-unit.nix
+  ];
+	programs.home-manager.enable = true;
+}

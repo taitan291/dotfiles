@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   xdg.configFile = {
     "fcitx5/profile".text = ''
       [Groups/0]

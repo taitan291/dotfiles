@@ -64,8 +64,8 @@
         system = "x86_64-linux";
         specialArgs = {inherit inputs;};
         modules = [
-          ./configuration.nix
-          ./hardware-configuration-laptop.nix
+          ./host/laptop/configuration.nix
+          ./host/laptop/hardware-configuration.nix
           {nixpkgs.overlays = [rust-overlay.overlays.default];}
           {nixpkgs.overlays = [emacs-overlay.overlays.default];}
           home-manager.nixosModules.home-manager
@@ -76,7 +76,7 @@
               users.taitan = {
                 imports = [
                   inputs.nixvim.homeModules.nixvim
-                  ./home.nix
+                  ./modules/home.nix
                 ];
               };
               extraSpecialArgs = {inherit inputs;};
@@ -90,8 +90,8 @@
         system = "x86_64-linux";
         specialArgs = {inherit inputs;};
         modules = [
-          ./configuration.nix
-          ./hardware-configuration-desktop.nix
+          ./host/desktop/configuration.nix
+          ./host/desktop/hardware-configuration.nix
           {nixpkgs.overlays = [rust-overlay.overlays.default];}
           {nixpkgs.overlays = [emacs-overlay.overlays.default];}
           home-manager.nixosModules.home-manager
@@ -102,7 +102,7 @@
               users.taitan = {
                 imports = [
                   inputs.nixvim.homeModules.nixvim
-                  ./home.nix
+                  ./modules/home.nix
                 ];
               };
               extraSpecialArgs = {inherit inputs;};

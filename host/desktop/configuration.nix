@@ -2,22 +2,24 @@
   inputs,
   pkgs,
   ...
-}: {
+}:
+let
+  common = ../common-modules;
+in
+{
   imports = [
     inputs.home-manager.nixosModules.home-manager
-    ../laptop/modules/i18n.nix
-    ../laptop/modules/users.nix
-    ../laptop/modules/fonts.nix
-    ../laptop/modules/boot.nix
-    ../laptop/modules/graphics.nix
-    ../laptop/modules/display.nix
-    ../laptop/modules/services.nix
-    ../laptop/modules/udev.nix
-    ../laptop/modules/environment.nix
-    ../laptop/modules/nix.nix
-    ../laptop/modules/system.nix
-
-
+		(common + "/i18n.nix")
+		(common + "/users.nix")
+		(common + "/fonts.nix")
+		(common + "/boot.nix")
+		(common + "/display.nix")
+		(common + "/services.nix")
+		(common + "/udev.nix")
+		(common + "/environment.nix")
+		(common + "/nix.nix")
+		(common + "/system.nix")
+		../laptop/modules/graphics.nix
     ./modules/nvidia.nix
   ];
 }

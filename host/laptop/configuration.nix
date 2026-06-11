@@ -2,19 +2,23 @@
   inputs,
   pkgs,
   ...
-}: {
+}: 
+let
+  common = ../common-modules;
+in
+{
   imports = [
     inputs.home-manager.nixosModules.home-manager
-    ./modules/i18n.nix
-    ./modules/users.nix
-    ./modules/fonts.nix
-    ./modules/boot.nix
+		(common + "/i18n.nix")
+		(common + "/users.nix")
+		(common + "/fonts.nix")
+		(common + "/boot.nix")
+		(common + "/display.nix")
+		(common + "/services.nix")
+		(common + "/udev.nix")
+		(common + "/environment.nix")
+		(common + "/nix.nix")
+		(common + "/system.nix")
     ./modules/graphics.nix
-    ./modules/display.nix
-    ./modules/services.nix
-    ./modules/udev.nix
-    ./modules/environment.nix
-    ./modules/nix.nix
-    ./modules/system.nix
   ];
 }

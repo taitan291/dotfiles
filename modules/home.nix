@@ -22,6 +22,7 @@
     ./hypr
     ./wezterm
     ./fcitx5
+		./discord.nix
     ./shell-unit.nix
   ];
 	programs.home-manager.enable = true;

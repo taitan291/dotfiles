@@ -1,4 +1,6 @@
 {
+	description = "My NixOS Configuration";
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
@@ -45,6 +47,14 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+		/*
+		# plymouth theme
+		plymouth-theme = {
+			url = "git+file:///home/taitan/working/plymouth";
+      inputs.nixpkgs.follows = "nixpkgs";
+		};
+		*/
   };
 
   outputs = {

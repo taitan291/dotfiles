@@ -1,4 +1,4 @@
-{ ... }: {
+{ pkgs, inputs, ... }: {
   boot.loader = {
     timeout = 60;
     efi = {
@@ -12,4 +12,11 @@
       useOSProber = true;
     };
   };
+	/*
+	boot.plymouth = {
+    enable = true;
+    theme = "my-custom-theme";
+		themePackages = [ inputs.plymouth-theme.packages.${pkgs.system}.myCustomTheme ];
+  };
+	*/
 }

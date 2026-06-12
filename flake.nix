@@ -36,11 +36,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+		/*
     # Emacs
     emacs-overlay = {
       url = "github:nix-community/emacs-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+		*/
 
     # Formatter
     treefmt-nix = {
@@ -61,7 +63,7 @@
     nixpkgs,
     home-manager,
     rust-overlay,
-    emacs-overlay,
+    #emacs-overlay,
     treefmt-nix,
     ...
   } @ inputs: let
@@ -77,7 +79,7 @@
           ./host/laptop/configuration.nix
           ./host/laptop/hardware-configuration.nix
           {nixpkgs.overlays = [rust-overlay.overlays.default];}
-          {nixpkgs.overlays = [emacs-overlay.overlays.default];}
+          #{nixpkgs.overlays = [emacs-overlay.overlays.default];}
           home-manager.nixosModules.home-manager
           {
             home-manager = {
@@ -103,7 +105,7 @@
           ./host/desktop/configuration.nix
           ./host/desktop/hardware-configuration.nix
           {nixpkgs.overlays = [rust-overlay.overlays.default];}
-          {nixpkgs.overlays = [emacs-overlay.overlays.default];}
+          #{nixpkgs.overlays = [emacs-overlay.overlays.default];}
           home-manager.nixosModules.home-manager
           {
             home-manager = {

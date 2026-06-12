@@ -33,27 +33,6 @@
         "type": "github"
       }
     },
-    "emacs-overlay": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "nixpkgs-stable": "nixpkgs-stable"
-      },
-      "locked": {
-        "lastModified": 1781236465,
-        "narHash": "sha256-NtCl7ZlKIZG1X86t/kx4tkZtBmm8YY3jXsKDKCU8CsA=",
-        "owner": "nix-community",
-        "repo": "emacs-overlay",
-        "rev": "f64052004a20fb75db64d1cec8c4d9b48984b9eb",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "emacs-overlay",
-        "type": "github"
-      }
-    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -487,22 +466,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-stable": {
-      "locked": {
-        "lastModified": 1780902259,
-        "narHash": "sha256-q8yYEC5f1mFlQO9RGna4LTc9QrcvWunX6FYp83munkQ=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "bd0ff2d3eac24699c3664d5966b9ef36f388e2ca",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-26.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1781074563,
@@ -541,26 +504,6 @@
         "type": "github"
       }
     },
-    "plymouth-theme": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1781238733,
-        "narHash": "sha256-RSfVv5W6m3vCGDt4+9gRthsTjd++txVf4EMT0U9t2J4=",
-        "ref": "refs/heads/main",
-        "rev": "f3b8d657628878dd92ba5f8b6bab6a4803a601e8",
-        "revCount": 5,
-        "type": "git",
-        "url": "file:///home/taitan/working/plymouth"
-      },
-      "original": {
-        "type": "git",
-        "url": "file:///home/taitan/working/plymouth"
-      }
-    },
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -586,13 +529,11 @@
     },
     "root": {
       "inputs": {
-        "emacs-overlay": "emacs-overlay",
         "flake-utils": "flake-utils",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim",
-        "plymouth-theme": "plymouth-theme",
         "rust-overlay": "rust-overlay",
         "treefmt-nix": "treefmt-nix"
       }

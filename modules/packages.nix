@@ -9,7 +9,6 @@
     anki
     firefox
     brave
-    discord
     slack
     direnv
     wine

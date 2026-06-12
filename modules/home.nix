@@ -11,7 +11,7 @@
     ./programs.nix
 
     ./nvim
-    ./emacs
+    #./emacs
     ./code
     ./waybar
     ./starship

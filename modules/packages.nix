@@ -14,5 +14,6 @@
     wine
     librsvg
     prismlauncher
+		ripgrep
   ];
 }

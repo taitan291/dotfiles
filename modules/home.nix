@@ -24,6 +24,7 @@
     ./fcitx5
 		./discord.nix
     ./shell-unit.nix
+    ./wlogout
   ];
 	programs.home-manager.enable = true;
 }

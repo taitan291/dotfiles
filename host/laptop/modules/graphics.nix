@@ -5,10 +5,6 @@
     enable32Bit = true;
   };
 
-  hardware.opengl = {
-    enable = true;
-  };
-
   hardware.graphics.extraPackages = with pkgs; [
     intel-media-driver
     vpl-gpu-rt

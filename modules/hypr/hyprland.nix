@@ -141,6 +141,7 @@
         "$mainMod, B, exec, $browser"
         "$mainMod, M, exec, missioncenter"
         "$mainMod SHIFT, L, exec, hyprlock"
+        "$mainMod, X, exec, wlogout"
 
         # フォーカス移動
         "$mainMod, H, movefocus, l"

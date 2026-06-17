@@ -5,28 +5,34 @@
     layout = [
       {
         label = "shutdown";
-        action = "shutdown now";
+        action = "systemctl poweroff";
         text = "Shutdown";
-        keybind = "s";
+        keybind = "p";
       }
       {
         label = "reboot";
-        action = "reboot";
+        action = "systemctl reboot";
         text = "Reboot";
         keybind = "r";
       }
       {
         label = "logout";
-        action = "hyprctl dispatch exit 0";
+        action = "hyprctl dispatch exit";
         text = "Logout";
-        keybind = "l";
+        keybind = "e";
       }
-      {
-        label = "poweroff";
-        action = "poweroff";
-        text = "Poweroff";
-        keybind = "p";
-      }
+			{
+				label = "lock";
+				action = "hyprlock";
+				text = "Lock";
+				keybind = "l";
+			}
+			{
+				label = "suspend";
+				action = "systemctl suspend";
+				text = "Sleep";
+				keybind = "s";
+			}
     ];
   };
 }

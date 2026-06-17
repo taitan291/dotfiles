@@ -20,23 +20,19 @@
       typescript-tools.enable = true;
       yazi = {
         enable = true;
-        enableBashIntegration = false;
         settings = {
           open_for_directories = false; # ディレクトリを開いたときにyaziを起動
         };
       };
-      nvim-colorizer = {
-        enable = true;
-        userDefaultOptions = {
-          names = false; # 色名(Red, Blue等)の着色
-          RGB = true; # RGB形式
-          RRGGBB = true; # RRGGBB形式
-          RRGGBBAA = true; # 透明度込み形式
-          mode = "background"; # 着色スタイル ("background", "foreground", "virtualtext")
-          tailwind = true; # Tailwind CSSのサポート
-          css = true; # これによりコメント内のカラーコードやCSS関数が有効化されます
-        };
-      };
+      colorizer = {
+				enable = true;
+				settings = {
+					user_default_options = {
+						RGB = true;
+						RRGGBB = true;
+					};
+				};
+			};
       lsp = {
         enable = true;
         servers = {
@@ -73,20 +69,12 @@
             };
           };
         };
-
-        setup = {
-          ells = ''
-            require('lspconfig').ells.setup({
-            	cmd = { "elisp-ls", "--stdio" },
-            	filetypes = { "elisp" },
-            	settings = {
-            		elispLS = {
-            			elsPaths = { "" },
-            		}
-            	}
-            })
-          '';
-        };
+				postConfig = ''
+					require('lspconfig').ells.setup({
+						cmd = { "elisp-ls", "--stdio" },
+					filetypes = { "elisp" },
+				})
+			'';
       };
     };
   };

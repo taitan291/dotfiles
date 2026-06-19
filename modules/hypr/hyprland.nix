@@ -3,12 +3,27 @@
     enable = true;
     configType = "hyprlang";
     plugins = [
-      #pkgs.hyprlandPlugins.hypr-dynamic-cursors
+      pkgs.hyprlandPlugins.hypr-dynamic-cursors
     ];
     settings = {
       monitor = [
         ",preferred,auto,1"
       ];
+		plugin = {
+			dynamic-cursors = {
+			enabled = true;
+        mode = "none";
+				shake = {
+					enabled = true;
+					threshold = 4.0;
+					base = 4.0;
+					speed = 6.0;
+					influence = 0.0;
+					limit = 0.0;
+					timeout = 2500;
+				};
+			};
+		};
 
       "$terminal" = "kitty";
       "$fileManager" = "kitty -e yazi";

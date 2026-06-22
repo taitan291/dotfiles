@@ -14,8 +14,8 @@
   };
 
   imports = [
+    ./plugins
     ./options.nix
-    ./plugins.nix
     ./keymaps.nix
   ];
 }

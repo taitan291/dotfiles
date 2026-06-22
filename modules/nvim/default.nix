@@ -11,7 +11,7 @@
   imports = [
 		./navigation
 		./utils
-    ./ui.nix
+    ./ui
 		./lsp.nix
     ./options.nix
   ];

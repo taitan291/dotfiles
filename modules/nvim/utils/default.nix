@@ -13,4 +13,7 @@
       treesitter.enable = true;
 		};
 	};
+	imports = [
+		./keymap.nix
+	];
 }

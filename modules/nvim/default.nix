@@ -6,16 +6,13 @@
     viAlias = true;
     vimAlias = true;
 		nixpkgs.source = pkgs.path;
-
-    colorschemes.nightfox = {
-      enable = true;
-      flavor = "nightfox";
-    };
   };
 
   imports = [
-    ./plugins
+		./navigation
+		./utils
+    ./ui.nix
+		./lsp.nix
     ./options.nix
-    ./keymaps.nix
   ];
 }

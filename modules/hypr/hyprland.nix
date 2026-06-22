@@ -139,8 +139,13 @@
         };
       };
 
-      windowrulev2 = {
-      };
+       windowrule = [
+				{
+					name = "discord-workspace";
+					workspace = 11;
+					"match:class" = "^(Discord|discord)$";
+				}
+			];
 
       #キーバインド
       bind = [
@@ -175,6 +180,7 @@
         "$mainMod, 8, workspace, 8"
         "$mainMod, 9, workspace, 9"
         "$mainMod, 0, workspace, 10"
+        "$mainMod, D, workspace, 11"
 
         # ウィンドウ移動
         "$mainMod SHIFT, 1, movetoworkspace, 1"

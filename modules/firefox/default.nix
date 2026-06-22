@@ -1,18 +1,30 @@
-{ pkgs, config, lib, ... }: {
+{ pkgs, ... }:
+
+{
   programs.firefox = {
-    enable = true;
-		configPath = "${config.xdg.configHome}/mozilla/firefox";
-		nativeMessagingHosts = [
-			pkgs.firefoxpwa
-		];
-  };
-	home.activation = {
-    # 既存のディレクトリが存在する場合のみ、XDGパスへ移行を実行
-    migrateFirefoxConfig = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      if [ -d "$HOME/.mozilla/firefox" ]; then
-        $DRY_RUN_CMD mkdir -p "''${XDG_CONFIG_HOME:-$HOME/.config}/mozilla"
-        $DRY_RUN_CMD mv "$HOME/.mozilla/firefox" "''${XDG_CONFIG_HOME:-$HOME/.config}/mozilla/firefox"
-        $DRY_RUN_CMD rmdir "$HOME/.mozilla" 2>/dev/null || true
+  enable = true;
+
+  nativeMessagingHosts = [
+    pkgs.firefoxpwa
+  ];
+};
+
+  home.packages = with pkgs; [
+    firefoxpwa
+    wlrctl
+  ];
+
+  home.file.".local/bin/copilot-toggle" = {
+    executable = true;
+    text = ''
+      #!/usr/bin/env bash
+
+      APP_ID="copilot"
+
+      if pgrep -f "firefoxpwa.*$APP_ID" >/dev/null; then
+        wlrctl window focus "Microsoft Copilot" 2>/dev/null || true
+      else
+        firefoxpwa site launch "$APP_ID"
       fi
     '';
   };

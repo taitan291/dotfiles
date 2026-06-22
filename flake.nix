@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+		nur.url = "github:nix-community/NUR";
 
     # Home-manager
     home-manager = {
@@ -59,6 +60,7 @@
     rust-overlay,
     #emacs-overlay,
     treefmt-nix,
+		nur,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -74,6 +76,11 @@
           ./host/laptop/hardware-configuration.nix
           {nixpkgs.overlays = [rust-overlay.overlays.default];}
           #{nixpkgs.overlays = [emacs-overlay.overlays.default];}
+					({ ... }: {
+          nixpkgs.overlays = [
+            nur.overlays.default
+          ];
+        })
           home-manager.nixosModules.home-manager
           {
             home-manager = {

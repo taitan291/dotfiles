@@ -1,27 +1,18 @@
 {...}: {
   programs.nixvim = {
-    keymaps = [
+		keymaps = [
       {
         mode = "n";
         key = "<leader>y"; # 任意のキー（例: Leader + y）
         action = "<cmd>Yazi<cr>";
         options.desc = "Open Yazi at current file";
       }
-     {
+			{
         mode = "n";
         key = "<leader>yy"; # カレントワーキングディレクトリで開く
         action = "<cmd>Yazi cwd<cr>";
         options.desc = "Open Yazi in CWD";
       }
-			{
-				mode = "t";
-				key = "<Esc><Esc>"; # 好みに応じて "jk" や "<C-[>" に変更してください
-				action = "<C-\\><C-n>";
-				options = {
-					desc = "ターミナルモードからノーマルモードへ戻る";
-					silent = true;
-				};
-			}
 			{
 				mode = "n";
 				key = "<leader>ff"; # Find Files (ファイル名検索)
@@ -54,15 +45,6 @@
 					desc = "Oil（ファイルマネージャ）を開く";
 				};
 			}
-      {
-        mode = "c";
-        key = "\\";
-        action = ":";
-        options = {
-          noremap = true;
-          desc = "Map ¥ to \\ in command-line mode";
-        };
-      }
-    ];
-  };
+		];
+	};
 }

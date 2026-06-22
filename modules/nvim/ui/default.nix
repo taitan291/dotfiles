@@ -41,4 +41,7 @@
 			};
 		};
 	};
+	imports = [
+		./keymaps.nix
+	];
 }

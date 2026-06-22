@@ -3,7 +3,7 @@
     keymaps = [
 			{
 				mode = "t";
-				key = "<Esc><Esc>"; # 好みに応じて "jk" や "<C-[>" に変更してください
+				key = "<Esc><Esc>";
 				action = "<C-\\><C-n>";
 				options = {
 					desc = "ターミナルモードからノーマルモードへ戻る";

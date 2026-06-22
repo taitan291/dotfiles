@@ -14,6 +14,6 @@
 		};
 	};
 	imports = [
-		./keymap.nix
+		./keymaps.nix
 	];
 }

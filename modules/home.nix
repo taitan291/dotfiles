@@ -25,7 +25,7 @@
 		./discord.nix
     ./shell-unit.nix
     ./wlogout
-		./firefox
+		#./firefox
   ];
 	programs.home-manager.enable = true;
 }

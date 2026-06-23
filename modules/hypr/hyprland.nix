@@ -45,8 +45,9 @@
       ];
       env = [
         # fcitx5
-        "QT_IM_MODULE,fcitx"
-        "XMODIFIERS,@im=fcitx"
+        "QT_IM_MODULE,fcitx5"
+				"GTK_IM_MODULE=fcitx5"
+				"XMODIFIERS,@im=fcitx5"
         # hyprland
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"

@@ -12,7 +12,8 @@
 		./navigation
 		./utils
     ./ui
-		./lsp.nix
+		./lsp
+		./skk
     ./options.nix
   ];
 }

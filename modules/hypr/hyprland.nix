@@ -9,21 +9,21 @@
       monitor = [
         ",preferred,auto,1"
       ];
-		plugin = {
-			dynamic-cursors = {
-			enabled = true;
-        mode = "none";
-				shake = {
-					enabled = true;
-					threshold = 4.0;
-					base = 4.0;
-					speed = 6.0;
-					influence = 0.0;
-					limit = 0.0;
-					timeout = 2500;
-				};
-			};
-		};
+      plugin = {
+        dynamic-cursors = {
+          enabled = true;
+          mode = "none";
+          shake = {
+            enabled = true;
+            threshold = 4.0;
+            base = 4.0;
+            speed = 6.0;
+            influence = 0.0;
+            limit = 0.0;
+            timeout = 2500;
+          };
+        };
+      };
 
       "$terminal" = "kitty";
       "$fileManager" = "kitty -e yazi";
@@ -46,8 +46,8 @@
       env = [
         # fcitx5
         "QT_IM_MODULE,fcitx5"
-				"GTK_IM_MODULE=fcitx5"
-				"XMODIFIERS,@im=fcitx5"
+        "GTK_IM_MODULE=fcitx5"
+        "XMODIFIERS,@im=fcitx5"
         # hyprland
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
@@ -140,13 +140,13 @@
         };
       };
 
-       windowrule = [
-				{
-					name = "discord-workspace";
-					workspace = 11;
-					"match:class" = "^(Discord|discord)$";
-				}
-			];
+      windowrule = [
+        {
+          name = "discord-workspace";
+          workspace = 11;
+          "match:class" = "^(Discord|discord)$";
+        }
+      ];
 
       #キーバインド
       bind = [

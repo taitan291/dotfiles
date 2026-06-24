@@ -17,8 +17,8 @@
       clipboard = "unnamedplus"; #クイックボードとの同期
       #vim.keymap.set('i', '<C-r>', '<C-r><C-o>', { noremap = true, desc = "Paste without auto-indent" })
 
-			showcmd = true;
-			timeoutlen = 3000;
+      showcmd = true;
+      timeoutlen = 3000;
     };
   };
 }

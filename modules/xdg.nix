@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {

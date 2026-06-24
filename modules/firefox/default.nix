@@ -1,13 +1,11 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   programs.firefox = {
-  enable = true;
+    enable = true;
 
-  nativeMessagingHosts = [
-    pkgs.firefoxpwa
-  ];
-};
+    nativeMessagingHosts = [
+      pkgs.firefoxpwa
+    ];
+  };
 
   home.packages = with pkgs; [
     firefoxpwa

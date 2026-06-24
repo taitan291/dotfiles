@@ -1,9 +1,9 @@
-{ pkgs, ... }: {
-	home = {
+{pkgs, ...}: {
+  home = {
     stateVersion = "25.11";
     username = "taitan";
     homeDirectory = "/home/taitan";
-	};
+  };
   imports = [
     ./packages.nix
     ./file.nix
@@ -21,10 +21,10 @@
     ./bash.nix
     ./hypr
     ./fcitx5
-		./discord.nix
+    ./discord.nix
     ./shell-unit.nix
     ./wlogout
-		#./firefox
+    #./firefox
   ];
-	programs.home-manager.enable = true;
+  programs.home-manager.enable = true;
 }

@@ -20,28 +20,28 @@
         };
       };
       colorizer = {
-				enable = true;
-				settings = {
-					user_default_options = {
-						RGB = true;
-						RRGGBB = true;
-					};
-				};
-			};
-			bufferline = {
-				enable = true;
-				settings = {
-					options = {
-						mode = "buffers"; # バッファをタブとして表示
-						always_show_bufferline = true;
-						diagnostics = "nvim_lsp"; # LSPのエラー等があればアイコンで通知
-						separator_style = "thin"; # 見た目の区切り線スタイル
-					};
-				};
-			};
-		};
-	};
-	imports = [
-		./keymaps.nix
-	];
+        enable = true;
+        settings = {
+          user_default_options = {
+            RGB = true;
+            RRGGBB = true;
+          };
+        };
+      };
+      bufferline = {
+        enable = true;
+        settings = {
+          options = {
+            mode = "buffers"; # バッファをタブとして表示
+            always_show_bufferline = true;
+            diagnostics = "nvim_lsp"; # LSPのエラー等があればアイコンで通知
+            separator_style = "thin"; # 見た目の区切り線スタイル
+          };
+        };
+      };
+    };
+  };
+  imports = [
+    ./keymaps.nix
+  ];
 }

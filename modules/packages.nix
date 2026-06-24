@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     hunspell
     git-graph
@@ -14,6 +14,6 @@
     wine
     librsvg
     prismlauncher
-		ripgrep
+    ripgrep
   ];
 }

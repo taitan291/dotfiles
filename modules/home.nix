@@ -20,7 +20,6 @@
     ./git.nix
     ./bash.nix
     ./hypr
-    ./wezterm
     ./fcitx5
 		./discord.nix
     ./shell-unit.nix

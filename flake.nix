@@ -1,11 +1,9 @@
 {
-	description = "My NixOS Configuration";
+  description = "My NixOS Configuration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
-		nur.url = "github:nix-community/NUR";
-
+    nur.url = "github:nix-community/NUR";
     # Home-manager
     home-manager = {
       url = "github:nix-community/home-manager/master";
@@ -24,34 +22,25 @@
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     # Neovim
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-		/*
+    /*
     # Emacs
     emacs-overlay = {
       url = "github:nix-community/emacs-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-		*/
-
-    # Formatter
-    treefmt-nix = {
-      url = "github:numtide/treefmt-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
+    */
+    /*
+    # plymouth theme
+    plymouth-theme = {
+    	url = "git+file:///home/taitan/working/plymouth";
+        inputs.nixpkgs.follows = "nixpkgs";
     };
-
-		/*
-		# plymouth theme
-		plymouth-theme = {
-			url = "git+file:///home/taitan/working/plymouth";
-      inputs.nixpkgs.follows = "nixpkgs";
-		};
-		*/
+    */
   };
 
   outputs = {
@@ -59,13 +48,11 @@
     home-manager,
     rust-overlay,
     #emacs-overlay,
-    treefmt-nix,
-		nur,
+    nur,
     ...
   } @ inputs: let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
-    treefmtConfig = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
   in {
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {
@@ -76,11 +63,11 @@
           ./host/laptop/hardware-configuration.nix
           {nixpkgs.overlays = [rust-overlay.overlays.default];}
           #{nixpkgs.overlays = [emacs-overlay.overlays.default];}
-					({ ... }: {
-          nixpkgs.overlays = [
-            nur.overlays.default
-          ];
-        })
+          ({...}: {
+            nixpkgs.overlays = [
+              nur.overlays.default
+            ];
+          })
           home-manager.nixosModules.home-manager
           {
             home-manager = {
@@ -125,10 +112,6 @@
         ];
       };
     };
-
-    formatter.${system} = treefmtConfig.config.build.wrapper;
-    devShells.${system}.default = pkgs.mkShell {
-      nativeBuildInputs = [treefmtConfig.config.build.wrapper];
-    };
+    formatter.${system} = pkgs.alejandra;
   };
 }

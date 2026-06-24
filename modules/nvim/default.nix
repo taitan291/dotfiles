@@ -1,19 +1,18 @@
-{pkgs, ...}: 
-{
+{pkgs, ...}: {
   programs.nixvim = {
     enable = true;
     defaultEditor = false;
     viAlias = true;
     vimAlias = true;
-		nixpkgs.source = pkgs.path;
+    nixpkgs.source = pkgs.path;
   };
 
   imports = [
-		./navigation
-		./utils
+    ./navigation
+    ./utils
     ./ui
-		./lsp
-		./skk
+    ./lsp
+    ./skk
     ./options.nix
   ];
 }

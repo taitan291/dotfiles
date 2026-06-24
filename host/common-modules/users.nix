@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   users.users.taitan = {
     isNormalUser = true;
     description = "taitan";

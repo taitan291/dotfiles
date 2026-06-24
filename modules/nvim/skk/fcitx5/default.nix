@@ -1,6 +1,5 @@
 {
-	programs.nixvim = {
-		extraConfigLua = builtins.readFile ./config.lua;
-	};
+  programs.nixvim = {
+    extraConfigLua = builtins.readFile ./config.lua;
+  };
 }
-

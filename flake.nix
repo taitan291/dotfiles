@@ -94,6 +94,11 @@
           ./host/desktop/hardware-configuration.nix
           {nixpkgs.overlays = [rust-overlay.overlays.default];}
           #{nixpkgs.overlays = [emacs-overlay.overlays.default];}
+          ({...}: {
+            nixpkgs.overlays = [
+              nur.overlays.default
+            ];
+          })
           home-manager.nixosModules.home-manager
           {
             home-manager = {

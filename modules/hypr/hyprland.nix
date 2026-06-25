@@ -38,8 +38,7 @@
         "nm-applet"
         "dunst"
         "waybar"
-        "fcitx5 -d -r"
-        "fcitx5-remote -r"
+        "fcitx5"
         "hyprctl setcursor breeze_cursors 24"
         "hyprpaper"
       ];

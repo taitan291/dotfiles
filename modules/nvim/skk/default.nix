@@ -10,7 +10,11 @@ in {
   programs.nixvim = {
     autoCmd = [
       {
-        event = ["VimEnter" "FocusGained" "InsertEnter"];
+        event = [
+          "VimEnter"
+          "FocusGained"
+          "InsertEnter"
+        ];
         command = "call system('fcitx5-remote -c')";
       }
     ];

@@ -8,8 +8,14 @@
     fontDir.enable = true;
     fontconfig = {
       defaultFonts = {
-        serif = ["Noto Serif CJK JP" "Noto Color Emoji"];
-        sansSerif = ["Noto Sans CJK JP" "Noto Color Emoji"];
+        serif = [
+          "Noto Serif CJK JP"
+          "Noto Color Emoji"
+        ];
+        sansSerif = [
+          "Noto Sans CJK JP"
+          "Noto Color Emoji"
+        ];
       };
     };
   };

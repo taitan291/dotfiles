@@ -1,17 +1,17 @@
 {pkgs, ...}: {
   home = {
     packages = with pkgs; [
-      hyprcursor #カーソル
-      hyprshot #スクリーンショット
+      hyprcursor # カーソル
+      hyprshot # スクリーンショット
       hyprlock # hyprlock
-      kitty #ターミナル
-      wofi #ランチャー
-      pavucontrol #音量調整(GUI)
-      playerctl #音量調整(CUI)
+      kitty # ターミナル
+      wofi # ランチャー
+      pavucontrol # 音量調整(GUI)
+      playerctl # 音量調整(CUI)
       alsa-utils
       dunst
       fastfetch
-      brightnessctl #画面高度
+      brightnessctl # 画面高度
       #plymouth #grub系アニメーション
     ];
     file = {

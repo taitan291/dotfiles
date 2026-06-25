@@ -23,7 +23,8 @@ in {
   home = {
     file = {
       ".emacs.d/conf".source = config.lib.file.mkOutOfStoreSymlink ".${dotfilesPath}/module/emacs/conf";
-      ".emacs.d/init.el".source = config.lib.file.mkOutOfStoreSymlink ".${dotfilesPath}/module/emacs/init.el";
+      ".emacs.d/init.el".source =
+        config.lib.file.mkOutOfStoreSymlink ".${dotfilesPath}/module/emacs/init.el";
     };
     packages = with pkgs; [
       #typst

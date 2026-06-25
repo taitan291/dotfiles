@@ -15,5 +15,7 @@
     librsvg
     prismlauncher
     ripgrep
+
+    tokei
   ];
 }

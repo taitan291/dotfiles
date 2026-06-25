@@ -1,6 +1,9 @@
 {...}: {
   nix.settings = {
-    experimental-features = ["nix-command" "flakes"];
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
     connect-timeout = 3;
     min-free-check-interval = 3;
     substituters = [

@@ -5,6 +5,7 @@
     fcitx5 = {
       waylandFrontend = true;
       addons = with pkgs; [
+        fcitx5-lua
         fcitx5-skk
         fcitx5-gtk
       ];

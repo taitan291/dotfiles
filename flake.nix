@@ -29,14 +29,6 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # emacs-overlay = {
-    #   url = "github:nix-community/emacs-overlay";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-    # plymouth-theme = {
-    #   url = "git+file:///home/taitan/working/plymouth";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
   };
 
   outputs = inputs @ {
@@ -45,7 +37,6 @@
     nur,
     home-manager,
     treefmt-nix,
-    #emacs-overlay,
     ...
   }:
     flake-parts.lib.mkFlake {inherit inputs;} {
@@ -66,11 +57,6 @@
               includes = ["*.css"];
             };
           };
-        };
-
-        devShells.default = pkgs.mkShell {
-          packages = with pkgs; [
-          ];
         };
       };
 

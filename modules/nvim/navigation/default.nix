@@ -50,6 +50,15 @@
           open_for_directories = false;
         };
       };
+			neo-tree = {
+				enable = true;
+				settings = {
+					window = {
+						position = "left";
+						width = 30;
+					};
+				};
+			};
     };
   };
   imports = [

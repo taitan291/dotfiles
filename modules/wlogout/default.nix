@@ -36,7 +36,16 @@
         text = "Sleep";
         keybind = "s";
       }
+			{
+				label = "hibernate";
+				action = "systemctl hibernate";
+				text = "Hibernate";
+				keybind = "h";
+			}
     ];
-    style = builtins.readFile ./style.css;
-  };
+		style = builtins.replaceStrings
+			[ "@WLOGOUT@" ]
+			[ "${pkgs.wlogout}" ]
+			(builtins.readFile ./style.css);
+	};
 }

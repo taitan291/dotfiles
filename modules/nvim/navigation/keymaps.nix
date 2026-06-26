@@ -3,13 +3,13 @@
     keymaps = [
       {
         mode = "n";
-        key = "<leader>y"; # 任意のキー（例: Leader + y）
+        key = "<leader>yy";
         action = "<cmd>Yazi<cr>";
         options.desc = "Open Yazi at current file";
       }
       {
         mode = "n";
-        key = "<leader>yy"; # カレントワーキングディレクトリで開く
+        key = "<leader>cy"; # カレントワーキングディレクトリで開く
         action = "<cmd>Yazi cwd<cr>";
         options.desc = "Open Yazi in CWD";
       }
@@ -45,6 +45,15 @@
           desc = "Oil（ファイルマネージャ）を開く";
         };
       }
+			{
+				mode = "n";
+				key = "<A-h>";
+				action = "<cmd>Neotree toggle<cr>";
+				options = {
+					desc = "Toggle Neo-tree sidebar";
+					silent = true;
+				};
+			}
     ];
   };
 }

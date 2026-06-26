@@ -11,6 +11,22 @@
         };
       };
       treesitter.enable = true;
+      mini = {
+        enable = true;
+        modules = {
+          surround = {
+            mappings = {
+              add = "sa";
+              delete = "sd";
+              find = "sf";
+              find_left = "sF";
+              highlight = "sh";
+              replace = "sr";
+              update_n_lines = "sn";
+            };
+          };
+        };
+      };
     };
   };
   imports = [

@@ -45,15 +45,15 @@
           desc = "Oil（ファイルマネージャ）を開く";
         };
       }
-			{
-				mode = "n";
-				key = "<A-h>";
-				action = "<cmd>Neotree toggle<cr>";
-				options = {
-					desc = "Toggle Neo-tree sidebar";
-					silent = true;
-				};
-			}
+      {
+        mode = "n";
+        key = "<A-h>";
+        action = "<cmd>Neotree toggle<cr>";
+        options = {
+          desc = "Toggle Neo-tree sidebar";
+          silent = true;
+        };
+      }
     ];
   };
 }

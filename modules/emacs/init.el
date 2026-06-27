@@ -1,5 +1,4 @@
-(add-to-list 'load-path "~/.emacs.d/conf")
+(add-to-list 'load-path "/home/taitan/.config/emacs/conf")
 
-(load "colorschemes")
-(load "lang")
-
+(load "ui")
+; (load "lang")

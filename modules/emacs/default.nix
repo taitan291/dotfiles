@@ -1,39 +1,29 @@
 {
   pkgs,
-  config,
   ...
 }: let
-  dotfilesPath = "${config.home.homeDirectory}/nixos";
+  dotfilesPath = "/home/taitan/.config/nixos";
 in {
   programs.emacs = {
     enable = true;
-    extraPackages = epkgs:
-      with epkgs; [
-        vterm
-        multi-vterm
-        doom-themes
-        neotree
-        projectile
-        browse-kill-ring
-        # undo履歴
-        undo-tree
-      ];
+    extraPackages = emacsPackages: with emacsPackages; [
+      catppuccin-theme
+    ];
+  };
+	xdg.configFile = {
+    "emacs/conf".source = ./conf;
+    "emacs/init.el".source = ./init.el;
   };
   home = {
-    file = {
-      ".emacs.d/conf".source = config.lib.file.mkOutOfStoreSymlink ".${dotfilesPath}/module/emacs/conf";
-      ".emacs.d/init.el".source =
-        config.lib.file.mkOutOfStoreSymlink ".${dotfilesPath}/module/emacs/init.el";
-    };
-    packages = with pkgs; [
-      #typst
-      typst
-      tinymist
-      typstyle
-
-      cmake
-      libtool
-      libvterm-neovim
-    ];
+    # packages = with pkgs; [
+    #   #typst
+    #   typst
+    #   tinymist
+    #   typstyle
+    #
+    #   cmake
+    #   libtool
+    #   libvterm-neovim
+    # ];
   };
 }

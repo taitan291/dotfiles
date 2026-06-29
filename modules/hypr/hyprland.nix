@@ -25,7 +25,7 @@
         };
       };
 
-      "$terminal" = "kitty";
+      "$terminal" = "ghostty";
       "$fileManager" = "kitty -e yazi";
       "$menu" = "wofi --show drun";
       "$browser" = "brave";

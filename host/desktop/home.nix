@@ -1,7 +1,7 @@
-{...}:let
+{...}: let
   home = ../../modules;
-in  {
+in {
   imports = [
-		(home + "/bash-desktop.nix")
+    (home + "/shell/desktop.nix")
   ];
 }

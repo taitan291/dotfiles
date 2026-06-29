@@ -1,4 +1,5 @@
 {pkgs, ...}: {
+	programs.zsh.enable = true;
   users.users.taitan = {
     isNormalUser = true;
     description = "taitan";
@@ -8,7 +9,7 @@
       "input"
       "video"
     ];
-    shell = pkgs.bash;
+    shell = pkgs.zsh;
     home = "/home/taitan";
   };
 }

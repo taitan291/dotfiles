@@ -15,7 +15,7 @@
   home.file.".local/bin/copilot-toggle" = {
     executable = true;
     text = ''
-      #!/usr/bin/env bash
+      #!/usr/bin/env zsh
 
       APP_ID="copilot"
 

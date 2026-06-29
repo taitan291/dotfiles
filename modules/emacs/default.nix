@@ -1,6 +1,4 @@
-{pkgs, ...}: let
-  dotfilesPath = "/home/taitan/.config/nixos";
-in {
+{pkgs, ...}: {
   programs.emacs = {
     enable = true;
     extraPackages = emacsPackages:

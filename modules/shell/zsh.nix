@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+_: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -12,6 +8,8 @@
     shellAliases = {
       sl = "ls && sl";
       lgit = "lazygit";
+
+      nd = "nix develop -c zsh";
     };
     setOptions = [
       # コマンドの重複の削除、残さない

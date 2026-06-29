@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{...}: {
   home = {
     stateVersion = "25.11";
     username = "taitan";
@@ -16,9 +16,8 @@
 
     ./nvim
     ./emacs
-    ./code
     ./waybar
-    ./starship
+    ./starship.nix
     ./file-manager/yazi.nix
     ./file-manager/thunar.nix
     ./ghostty.nix

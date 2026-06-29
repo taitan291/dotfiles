@@ -1,4 +1,4 @@
-{...}: {
+_: {
   programs.nixvim = {
     keymaps = [
       {
@@ -16,7 +16,7 @@
       # クローズ用（必要に応じて）
       {
         mode = "n";
-        key = "<leader>c";
+        key = "<leader>bd";
         action = "<cmd>bdelete<cr>";
         options.desc = "Close Buffer";
       }

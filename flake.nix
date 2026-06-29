@@ -43,7 +43,11 @@
         treefmt-nix.flakeModule
         git-hooks-nix.flakeModule
       ];
-      perSystem = {config, ...}: {
+      perSystem = {
+        config,
+        pkgs,
+        ...
+      }: {
         treefmt = {
           projectRootFile = "flake.nix";
           programs = {
@@ -61,6 +65,12 @@
           hooks = {
             treefmt.enable = true;
           };
+        };
+        devShells.default = pkgs.mkShell {
+          # ...既存のdevShells設定...
+          shellHook = ''
+            ${config.pre-commit.installationScript}
+          '';
         };
       };
 

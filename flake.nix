@@ -5,6 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nur.url = "github:nix-community/NUR";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    git-hooks-nix.url = "github:cachix/git-hooks.nix";
     # nixos-wsl = {
     #   url = "github:nix-community/NixOS-WSL";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -33,16 +34,16 @@
     nur,
     home-manager,
     treefmt-nix,
+    git-hooks-nix,
     ...
   }:
     flake-parts.lib.mkFlake {inherit inputs;} {
       systems = ["x86_64-linux"];
-      imports = [treefmt-nix.flakeModule];
-      perSystem = {
-        pkgs,
-        system,
-        ...
-      }: {
+      imports = [
+        treefmt-nix.flakeModule
+        git-hooks-nix.flakeModule
+      ];
+      perSystem = {config, ...}: {
         treefmt = {
           projectRootFile = "flake.nix";
           programs = {
@@ -52,6 +53,13 @@
               enable = true;
               includes = ["*.css"];
             };
+          };
+        };
+        formatter = config.treefmt.build.wrapper;
+
+        pre-commit.settings = {
+          hooks = {
+            treefmt.enable = true;
           };
         };
       };

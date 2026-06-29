@@ -3,10 +3,10 @@
     stateVersion = "25.11";
     username = "taitan";
     homeDirectory = "/home/taitan";
-		sessionVariables = {
-			EDITOR = "nvim";
-			BROWSER = "brave";
-		};
+    sessionVariables = {
+      EDITOR = "nvim";
+      BROWSER = "brave";
+    };
   };
   imports = [
     ./packages.nix

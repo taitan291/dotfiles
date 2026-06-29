@@ -1,4 +1,4 @@
-{...}: {
+_: {
   services.hyprlock = {
     enable = true;
     settings = {

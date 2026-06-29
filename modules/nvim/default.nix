@@ -13,6 +13,8 @@
     ./ui
     ./lsp
     ./skk
+    ./copilot
     ./options.nix
+    ./completion.nix
   ];
 }

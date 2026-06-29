@@ -5,7 +5,10 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nur.url = "github:nix-community/NUR";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    git-hooks-nix.url = "github:cachix/git-hooks.nix";
+    git-hooks-nix = {
+      url = "github:cachix/git-hooks.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # nixos-wsl = {
     #   url = "github:nix-community/NixOS-WSL";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -33,15 +36,13 @@
     flake-parts,
     nur,
     home-manager,
-    treefmt-nix,
-    git-hooks-nix,
     ...
   }:
     flake-parts.lib.mkFlake {inherit inputs;} {
       systems = ["x86_64-linux"];
       imports = [
-        treefmt-nix.flakeModule
-        git-hooks-nix.flakeModule
+        inputs.treefmt-nix.flakeModule
+        inputs.git-hooks-nix.flakeModule
       ];
       perSystem = {
         config,
@@ -67,7 +68,6 @@
           };
         };
         devShells.default = pkgs.mkShell {
-          # ...既存のdevShells設定...
           shellHook = ''
             ${config.pre-commit.installationScript}
           '';
@@ -83,7 +83,7 @@
             modules = [
               ./host/${host}/configuration.nix
               ./host/${host}/hardware-configuration.nix
-              ({...}: {nixpkgs.overlays = [nur.overlays.default];})
+              (_: {nixpkgs.overlays = [nur.overlays.default];})
               home-manager.nixosModules.home-manager
               {
                 home-manager = {

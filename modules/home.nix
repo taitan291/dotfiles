@@ -12,7 +12,6 @@
     ./packages.nix
     ./file.nix
     ./xdg.nix
-    ./programs.nix
 
     ./nvim
     ./emacs
@@ -26,6 +25,7 @@
     ./shell/utils.nix
     ./hypr
     ./fcitx5
+    ./wofi.nix
     ./discord.nix
     ./wlogout
     #./firefox

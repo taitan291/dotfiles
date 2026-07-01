@@ -1,6 +1,5 @@
 {
   description = "My NixOS Configuration";
-
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nur.url = "github:nix-community/NUR";
@@ -9,10 +8,10 @@
       url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # nixos-wsl = {
-    #   url = "github:nix-community/NixOS-WSL";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    nixos-wsl = {
+      url = "github:nix-community/NixOS-WSL";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -31,13 +30,7 @@
     };
   };
 
-  outputs = inputs @ {
-    nixpkgs,
-    flake-parts,
-    nur,
-    home-manager,
-    ...
-  }:
+  outputs = inputs @ {flake-parts, ...}:
     flake-parts.lib.mkFlake {inherit inputs;} {
       systems = ["x86_64-linux"];
       imports = [
@@ -77,21 +70,20 @@
       flake = let
         # ホスト名を受け取って nixosSystem を返すヘルパー関数
         mkHost = host:
-          nixpkgs.lib.nixosSystem {
+          inputs.nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = {inherit inputs;};
             modules = [
               ./host/${host}/configuration.nix
               ./host/${host}/hardware-configuration.nix
-              (_: {nixpkgs.overlays = [nur.overlays.default];})
-              home-manager.nixosModules.home-manager
+              {nixpkgs.overlays = [inputs.nur.overlays.default];}
+              inputs.home-manager.nixosModules.home-manager
               {
                 home-manager = {
                   useGlobalPkgs = true;
                   useUserPackages = true;
                   users.taitan.imports = [
                     inputs.nixvim.homeModules.nixvim
-                    ./modules/home.nix
                     ./host/${host}/home.nix
                   ];
                   extraSpecialArgs = {inherit inputs;};
@@ -104,6 +96,7 @@
         nixosConfigurations = {
           laptop = mkHost "laptop";
           desktop = mkHost "desktop";
+          wsl = mkHost "wsl";
         };
       };
     };

@@ -1,8 +1,7 @@
-{inputs, ...}: let
+{...}: let
   common = ../common-modules;
 in {
   imports = [
-    inputs.home-manager.nixosModules.home-manager
     (common + "/i18n.nix")
     (common + "/users.nix")
     (common + "/fonts.nix")

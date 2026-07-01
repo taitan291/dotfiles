@@ -2,7 +2,7 @@
   common = ../common-modules;
 in {
   imports = [
-	..hardware-configuration.nix
+    ./hardware-configuration.nix
 
     (common + "/i18n.nix")
     (common + "/users.nix")

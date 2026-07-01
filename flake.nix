@@ -75,7 +75,6 @@
             specialArgs = {inherit inputs;};
             modules = [
               ./host/${host}/configuration.nix
-              ./host/${host}/hardware-configuration.nix
               {nixpkgs.overlays = [inputs.nur.overlays.default];}
               inputs.home-manager.nixosModules.home-manager
               {

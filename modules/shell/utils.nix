@@ -1,4 +1,4 @@
-_: {
+{pkgs, ...}: {
   programs = {
     zoxide = {
       enable = true;
@@ -33,5 +33,16 @@ _: {
       la = "eza -a";
       cat = "bat";
     };
-  };
+		packages = with pkgs; [
+			hunspell
+			git-graph
+			lazygit
+			gti
+			sl
+
+			ripgrep
+			direnv
+			tokei
+		];
+	};
 }

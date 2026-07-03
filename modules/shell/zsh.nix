@@ -1,16 +1,14 @@
-_: {
+{
+  config,
+  osConfig,
+  ...
+}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    shellAliases = {
-      sl = "ls && sl";
-      lgit = "lazygit";
-
-      nd = "nix develop -c zsh";
-    };
     setOptions = [
       # コマンドの重複の削除、残さない
       "hist_ignore_dups"
@@ -22,24 +20,19 @@ _: {
       # ミスしたときのういビームの停止
       "no_beep"
     ];
-    initContent = ''
-            zmodload zsh/complist
+    initContent = builtins.readFile ./zshrc.zsh;
+  };
+  home = {
+    shellAliases = {
+      sl = "ls && sl";
+      lgit = "lazygit";
 
-            zstyle ':completion:*:*:(nvim|emacs):*:*' ignored-patterns '*.pdf' '*.lock'
-            zstyle ':completion:*:*:xdg-open:*:*' ignored-patterns '*.typ'
+      nd = "nix develop -c zsh";
 
-         # Tab変換
-         zstyle ':completion:*' menu select
-
-         # キャッシュを有効にして補完速度を向上（特にパッケージ数が多いNixOSで有効）
-            zstyle ':completion:*' use-cache yes
-            zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/zcompcache"
-
-         bindkey -M menuselect '^g' undo
-
-      ns() {
-           nix shell "$@" -c zsh
-         }
-    '';
+      rebuild =
+        if osConfig.networking.hostName == "wsl"
+        then "sudo nixos-rebuild switch --flake .#wsl"
+        else "sudo nixos-rebuild switch --flake ~/.config/nixos/.#${osConfig.networking.hostName}";
+    };
   };
 }

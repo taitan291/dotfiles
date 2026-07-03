@@ -22,8 +22,6 @@ in {
     (home + "/shell/zsh.nix")
     (home + "/shell/utils.nix")
     (home + "/fcitx5")
-
-    (home + "/shell/wsl.nix")
   ];
   programs.home-manager.enable = true;
 }

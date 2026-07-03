@@ -3,7 +3,5 @@ _: let
 in {
   imports = [
     (home + "/home.nix")
-
-    (home + "/shell/desktop.nix")
   ];
 }

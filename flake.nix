@@ -51,6 +51,10 @@
               enable = true;
               includes = ["*.css"];
             };
+            shfmt = {
+              enable = true;
+              includes = ["*.sh" "*.bash" "*.zsh"];
+            };
           };
         };
         formatter = config.treefmt.build.wrapper;

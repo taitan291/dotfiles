@@ -33,16 +33,16 @@
       la = "eza -a";
       cat = "bat";
     };
-		packages = with pkgs; [
-			hunspell
-			git-graph
-			lazygit
-			gti
-			sl
+    packages = with pkgs; [
+      hunspell
+      git-graph
+      lazygit
+      gti
+      sl
 
-			ripgrep
-			direnv
-			tokei
-		];
-	};
+      ripgrep
+      direnv
+      tokei
+    ];
+  };
 }

@@ -1,5 +1,16 @@
-{...}: {
+{pkgs, ...}: let
+  tobira = pkgs.vimUtils.buildVimPlugin {
+    name = "tobira";
+    src = builtins.fetchGit {
+      url = "https://github.com/kamegoro/tobira.nvim";
+      rev = "cd286ca662703b9d9082704892995565aac9f048";
+    };
+  };
+in {
   programs.nixvim = {
+    extraPlugins = with pkgs.vimPlugins; [
+      tobira
+    ];
     plugins = {
       toggleterm = {
         enable = true;
@@ -31,5 +42,7 @@
   };
   imports = [
     ./keymaps.nix
+
+    ./tobira
   ];
 }

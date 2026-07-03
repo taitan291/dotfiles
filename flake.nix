@@ -89,7 +89,7 @@
                     inputs.nixvim.homeModules.nixvim
                     ./host/${host}/home.nix
                   ];
-                  extraSpecialArgs = {inherit inputs;};
+                  extraSpecialArgs = {inherit inputs host;};
                   backupFileExtension = "bkup";
                 };
               }

@@ -1,8 +1,4 @@
-{
-  config,
-  osConfig,
-  ...
-}: {
+{host, ...}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -30,9 +26,9 @@
       nd = "nix develop -c zsh";
 
       rebuild =
-        if osConfig.networking.hostName == "wsl"
+        if host == "wsl"
         then "sudo nixos-rebuild switch --flake .#wsl"
-        else "sudo nixos-rebuild switch --flake ~/.config/nixos/.#${osConfig.networking.hostName}";
+        else "sudo nixos-rebuild switch --flake ~/.config/nixos/.#${host}";
     };
   };
 }

@@ -37,6 +37,13 @@ _: {
               };
             };
           };
+          svelte = {
+            enable = true;
+          };
+          emmet_ls = {
+            enable = true;
+            filetypes = ["svelte"];
+          };
         };
         postConfig = builtins.readFile ./config.lua;
       };

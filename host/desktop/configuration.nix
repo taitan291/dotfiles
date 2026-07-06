@@ -16,6 +16,5 @@ in {
     (common + "/system.nix")
     ../laptop/modules/graphics.nix
     ./modules/nvidia.nix
-    ../../modules/steam
   ];
 }

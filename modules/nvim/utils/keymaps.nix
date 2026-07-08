@@ -12,6 +12,15 @@
       }
       {
         mode = "n";
+        key = "<Leader>p";
+        action = "<cmd>YankyRingHistory<cr>";
+        options = {
+          desc = "Open Yank History";
+          silent = true;
+        };
+      }
+      {
+        mode = "n";
         key = "<Leader>o";
         action = "m`o<Esc>``";
         options = {
@@ -25,6 +34,24 @@
         action = "m`O<Esc>``";
         options = {
           desc = "Insert newline above without moving cursor";
+          silent = true;
+        };
+      }
+      {
+        mode = "v";
+        key = ">";
+        action = ">gv";
+        options = {
+          desc = "Indent right and keep selection";
+          silent = true;
+        };
+      }
+      {
+        mode = "v";
+        key = "<";
+        action = "<gv";
+        options = {
+          desc = "Indent left and keep selection";
           silent = true;
         };
       }

@@ -11,6 +11,7 @@ _: {
           clangd.enable = true; # C/C++用
           astro.enable = true; # Astro用
           svelte.enable = true; # svelte
+          tailwindcss.enable = true; #tailwindcss
 
           # vscode-langservers-extracted
           html.enable = true;

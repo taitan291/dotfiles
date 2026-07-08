@@ -14,6 +14,7 @@ in {
     (common + "/environment.nix")
     (common + "/nix.nix")
     (common + "/system.nix")
+    (common + "/nix_ld.nix")
     ./modules/graphics.nix
   ];
 }

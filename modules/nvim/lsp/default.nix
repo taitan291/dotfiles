@@ -10,6 +10,7 @@ _: {
           pyright.enable = true; # Python用
           clangd.enable = true; # C/C++用
           astro.enable = true; # Astro用
+          svelte.enable = true; # svelte
 
           # vscode-langservers-extracted
           html.enable = true;
@@ -36,9 +37,6 @@ _: {
                 http = "127.0.0.1:23333";
               };
             };
-          };
-          svelte = {
-            enable = true;
           };
           emmet_ls = {
             enable = true;

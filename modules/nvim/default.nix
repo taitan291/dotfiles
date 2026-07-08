@@ -5,6 +5,11 @@
     viAlias = true;
     vimAlias = true;
     nixpkgs.source = pkgs.path;
+    filetype = {
+      extension = {
+        svelte = "svelte";
+      };
+    };
   };
 
   imports = [

@@ -3,7 +3,7 @@
     name = "tobira";
     src = builtins.fetchGit {
       url = "https://github.com/kamegoro/tobira.nvim";
-      rev = "cd286ca662703b9d9082704892995565aac9f048";
+      rev = "f5b17a928544b0cf84100d3b5f889f4a781f93d6";
     };
   };
 in {
@@ -21,7 +21,13 @@ in {
           size = 10;
         };
       };
-      treesitter.enable = true;
+      treesitter = {
+        enable = true;
+        settings.ensure_installed = ["svelte" "html" "css" "javascript" "typescript"];
+        grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+          svelte
+        ];
+      };
       mini = {
         enable = true;
         modules = {

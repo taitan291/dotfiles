@@ -37,24 +37,6 @@
           silent = true;
         };
       }
-      {
-        mode = "v";
-        key = ">";
-        action = ">gv";
-        options = {
-          desc = "Indent right and keep selection";
-          silent = true;
-        };
-      }
-      {
-        mode = "v";
-        key = "<";
-        action = "<gv";
-        options = {
-          desc = "Indent left and keep selection";
-          silent = true;
-        };
-      }
     ];
   };
 }

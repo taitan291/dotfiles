@@ -44,6 +44,15 @@ in {
           };
         };
       };
+      yanky = {
+        enable = true;
+        settings = {
+          highlight = {
+            on_yank = true;
+            timer = 200;
+          };
+        };
+      };
     };
   };
   imports = [

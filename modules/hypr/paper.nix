@@ -1,4 +1,7 @@
-_: {
+{inputs, ...}: {
+  imports = [
+    inputs.private-themes.homeModules.wallpaper
+  ];
   services.hyprpaper = {
     enable = true;
     settings = {

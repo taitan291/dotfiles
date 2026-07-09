@@ -16,7 +16,7 @@
     ];
     file = {
       "Pictures/Screenshots/.keep".text = "";
-      "Pictures/wallpapers/.keep".text = "";
+      "/home/taitan/Pictures/wallpapers/.keep".text = "";
     };
   };
 

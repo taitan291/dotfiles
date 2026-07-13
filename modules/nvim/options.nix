@@ -21,6 +21,6 @@ _: {
       timeout = true;
       timeoutlen = 3000;
     };
-		globals.mapleader = “ ”;
+    globals.mapleader = " ";
   };
 }

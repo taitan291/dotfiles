@@ -20,9 +20,6 @@
   };
   home = {
     shellAliases = {
-      sl = "ls && sl";
-      lgit = "lazygit";
-
       nd = "nix develop -c zsh";
 
       rebuild =

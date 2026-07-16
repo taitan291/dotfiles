@@ -1,29 +1,29 @@
 {pkgs, ...}: {
   programs.firefox = {
     enable = true;
+    profiles.default = {
+      id = 0;
+      name = "default";
+      isDefault = true;
 
-    nativeMessagingHosts = [
-      pkgs.firefoxpwa
-    ];
-  };
+      search = {
+        default = "google";
+        force = true;
+      };
 
-  home.packages = with pkgs; [
-    firefoxpwa
-    wlrctl
-  ];
+      settings = {
+        "browser.startup.homepage" = "https://www.google.com";
 
-  home.file.".local/bin/copilot-toggle" = {
-    executable = true;
-    text = ''
-      #!/usr/bin/env zsh
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "svg.context-properties.content.enabled" = true;
 
-      APP_ID="copilot"
+        "signon.rememberSignons" = false; # パスワード保存プロンプトの無効化
+        "privacy.trackingprotection.enabled" = true; # トラッキング保護
 
-      if pgrep -f "firefoxpwa.*$APP_ID" >/dev/null; then
-        wlrctl window focus "Microsoft Copilot" 2>/dev/null || true
-      else
-        firefoxpwa site launch "$APP_ID"
-      fi
-    '';
+        "sidebar.position_start" = true;
+        "sidebar.visible" = true;
+      };
+      userChrome = builtins.readFile ./chrome.css;
+    };
   };
 }

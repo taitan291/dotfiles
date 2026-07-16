@@ -26,19 +26,6 @@ _: {
             installRustc = true;
           };
 
-          # typst
-          tinymist = {
-            enable = true;
-            settings = {
-              exportPdf = "onSave";
-              formatterMode = "typstyle";
-              preview = {
-                exportPdf = "onSave";
-                refresh = "onSave";
-                http = "127.0.0.1:23333";
-              };
-            };
-          };
           emmet_ls = {
             enable = true;
             filetypes = ["svelte"];

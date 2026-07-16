@@ -28,7 +28,7 @@
     ./wofi.nix
     ./discord.nix
     ./wlogout
-    #./firefox
+    ./firefox
   ];
   programs.home-manager.enable = true;
 }

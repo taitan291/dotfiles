@@ -19,6 +19,7 @@
     ./lsp
     ./skk
     ./copilot
+		./typst
     ./options.nix
     ./completion.nix
   ];

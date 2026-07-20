@@ -10,9 +10,6 @@
       "hist_ignore_dups"
       "hist_ignore_all_dups"
 
-      # スペルミスの訂正
-      "correct"
-
       # ミスしたときのういビームの停止
       "no_beep"
     ];

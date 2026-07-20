@@ -21,6 +21,7 @@ _: {
       };
     };
   };
+services.logind.lidSwitch = "suspend";
 
   programs.dconf.enable = true;
 }

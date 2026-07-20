@@ -23,13 +23,9 @@
       enableZshIntegration = true;
       nix-direnv.enable = true;
     };
-		# thefuck = {
-		# 	enable = true;
-		# 	enableZshIntegration = true; # Zsh用のエイリアスとフックを自動設定
-		# };
 		pay-respects = {
-			enable = true;
-			enableZshIntegration = true; # Zsh用の連携を有効化（Zsh有効時はデフォルトでtrueになります）
+      enable = true;
+      enableZshIntegration = true;
 		};
   };
 

@@ -21,7 +21,11 @@ _: {
       };
     };
   };
-services.logind.lidSwitch = "suspend";
+	services.logind.settings = {
+    Login = {
+      HandleLidSwitch = "suspend";
+    };
+  };
 
   programs.dconf.enable = true;
 }

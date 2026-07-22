@@ -26,7 +26,7 @@
       };
 
       "$terminal" = "ghostty";
-      "$fileManager" = "kitty -e yazi";
+      "$fileManager" = "thunar";
       "$menu" = "wofi --show drun";
       "$browser" = "brave";
       "$mainMod" = "SUPER";
@@ -153,7 +153,6 @@
         "$mainMod, C, killactive,"
         "$mainMod, N, exit,"
         "$mainMod, E, exec, $fileManager"
-        "$mainMod SHIFT, E, exec, thunar"
         "$mainMod, V, togglefloating,"
         "$mainMod, R, exec, $menu"
         "$mainMod, P, pseudo,"

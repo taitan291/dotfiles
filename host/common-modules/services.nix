@@ -21,7 +21,7 @@ _: {
       };
     };
   };
-	services.logind.settings = {
+  services.logind.settings = {
     Login = {
       HandleLidSwitch = "suspend";
     };

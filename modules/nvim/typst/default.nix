@@ -3,20 +3,20 @@
     plugins = {
       lsp = {
         enable = true;
-				servers = {
-					tinymist = {
-						enable = true;
-						settings = {
-							exportPdf = "onSave";
-							formatterMode = "typstyle";
-							preview = {
-								exportPdf = "onSave";
-								refresh = "onSave";
-								http = "127.0.0.1:23333";
-							};
-						};
-					};
-				};
+        servers = {
+          tinymist = {
+            enable = true;
+            settings = {
+              exportPdf = "onSave";
+              formatterMode = "typstyle";
+              preview = {
+                exportPdf = "onSave";
+                refresh = "onSave";
+                http = "127.0.0.1:23333";
+              };
+            };
+          };
+        };
       };
     };
     extraPlugins = with pkgs.vimPlugins; [
@@ -33,11 +33,11 @@
       }
     '';
   };
-	home.packages = with pkgs; [
-		typst
-		tinymist
-	];
-	imports = [
-		./keymaps.nix
-	];
+  home.packages = with pkgs; [
+    typst
+    tinymist
+  ];
+  imports = [
+    ./keymaps.nix
+  ];
 }

@@ -13,8 +13,8 @@ _: {
       background-opacity = 1;
       # Hyprland(Wayland)等のタイリングWM環境向けの最適化
       window-decoration = false;
-			
-			working-directory = "home";
+
+      working-directory = "home";
       tab-inherit-working-directory = false;
     };
   };

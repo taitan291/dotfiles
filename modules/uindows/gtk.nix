@@ -1,4 +1,8 @@
-{pkgs, config, ...}:let
+{
+  pkgs,
+  config,
+  ...
+}: let
   uindowsGtk = pkgs.stdenv.mkDerivation {
     pname = "uindows-theme";
     version = "unstable";
@@ -13,25 +17,24 @@
       cp -r * $out/share/themes/Uindows/
     '';
   };
-in
-{
+in {
   gtk = {
     enable = true;
     theme = {
       name = "Uindows";
       package = uindowsGtk;
     };
-		gtk3.extraConfig = {
+    gtk3.extraConfig = {
       gtk-theme-name = "Uindows";
     };
     gtk4 = {
-			extraConfig = {
-				gtk-theme-name = "Uindows";
-			};
-			theme = config.gtk.theme;
-		};
+      extraConfig = {
+        gtk-theme-name = "Uindows";
+      };
+      theme = config.gtk.theme;
+    };
   };
-	home.sessionVariables = {
+  home.sessionVariables = {
     GTK_THEME = "Uindows";
   };
 }

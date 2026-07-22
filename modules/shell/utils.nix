@@ -23,10 +23,10 @@
       enableZshIntegration = true;
       nix-direnv.enable = true;
     };
-		pay-respects = {
+    pay-respects = {
       enable = true;
       enableZshIntegration = true;
-		};
+    };
   };
 
   # 必要に応じてエイリアスを設定

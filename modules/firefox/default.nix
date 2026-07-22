@@ -1,7 +1,11 @@
-{pkgs, config, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   programs.firefox = {
     enable = true;
-		configPath = "${config.xdg.configHome}/mozilla/firefox";
+    configPath = "${config.xdg.configHome}/mozilla/firefox";
     profiles.default = {
       id = 0;
       name = "default";

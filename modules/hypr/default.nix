@@ -12,17 +12,14 @@
       dunst
       fastfetch
       brightnessctl # 画面高度
-      #plymouth #grub系アニメーション
     ];
     file = {
       "Pictures/Screenshots/.keep".text = "";
-      "/home/taitan/Pictures/wallpapers/.keep".text = "";
     };
   };
 
   imports = [
     ./hyprland.nix
-    ./paper.nix
     #./lock.nix
     #./cursor.nix
   ];

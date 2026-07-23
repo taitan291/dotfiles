@@ -20,6 +20,7 @@
 
   imports = [
     ./hyprland.nix
+    ./sounds.nix
     #./lock.nix
     #./cursor.nix
   ];

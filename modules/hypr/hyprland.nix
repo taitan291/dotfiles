@@ -2,28 +2,28 @@
   wayland.windowManager.hyprland = {
     enable = true;
     configType = "hyprlang";
-    plugins = [
-      pkgs.hyprlandPlugins.hypr-dynamic-cursors
-    ];
+    # plugins = [
+    #   pkgs.hyprlandPlugins.hypr-dynamic-cursors
+    # ];
     settings = {
       monitor = [
         ",preferred,auto,1"
       ];
-      plugin = {
-        dynamic-cursors = {
-          enabled = true;
-          mode = "none";
-          shake = {
-            enabled = true;
-            threshold = 4.0;
-            base = 4.0;
-            speed = 6.0;
-            influence = 0.0;
-            limit = 0.0;
-            timeout = 2500;
-          };
-        };
-      };
+      # plugin = {
+      #   dynamic-cursors = {
+      #     enabled = true;
+      #     mode = "none";
+      #     shake = {
+      #       enabled = true;
+      #       threshold = 4.0;
+      #       base = 4.0;
+      #       speed = 6.0;
+      #       influence = 0.0;
+      #       limit = 0.0;
+      #       timeout = 2500;
+      #     };
+      #   };
+      # };
 
       "$terminal" = "ghostty";
       "$fileManager" = "thunar";
@@ -53,8 +53,8 @@
 
       # 一般設定
       general = {
-        gaps_in = 10;
-        gaps_out = 10;
+        gaps_in = 5;
+        gaps_out = 5;
         border_size = 2;
         "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
         "col.inactive_border" = "rgba(595959aa)";
@@ -208,23 +208,6 @@
       bindm = [
         "$mainMod, mouse:272, movewindow"
         "$mainMod, mouse:273, resizewindow"
-      ];
-
-      # メディアキー
-      bindel = [
-        ",XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
-        ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-        ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-        ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-        ",XF86MonBrightnessUp, exec, brightnessctl -e4 -n2 set 5%+"
-        ",XF86MonBrightnessDown, exec, brightnessctl -e4 -n2 set 5%-"
-      ];
-
-      bindl = [
-        ", XF86AudioNext, exec, playerctl next"
-        ", XF86AudioPause, exec, playerctl play-pause"
-        ", XF86AudioPlay, exec, playerctl play-pause"
-        ", XF86AudioPrev, exec, playerctl previous"
       ];
 
       xwayland = {

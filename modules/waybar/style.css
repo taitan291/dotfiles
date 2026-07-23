@@ -7,7 +7,6 @@
 window#waybar {
   color: #aab2bf;
   background: rgba(22, 25, 28, 0.9);
-  border-bottom: 2px solid #51afef;
 }
 
 #workspaces button {

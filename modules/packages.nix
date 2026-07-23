@@ -8,5 +8,10 @@
     wine
     librsvg
     prismlauncher
+		vscode
+
+
+		# EX
+
   ];
 }

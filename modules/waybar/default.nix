@@ -29,4 +29,9 @@ in {
   imports = [
     ./settings.nix
   ];
+	wayland.windowManager.hyprland.settings = {
+    exec-once = [
+        "waybar"
+    ];
+  };
 }

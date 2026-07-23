@@ -37,7 +37,6 @@
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "nm-applet"
         "dunst"
-        "waybar"
         "fcitx5 -d"
         "hyprctl setcursor breeze_cursors 24"
       ];
@@ -54,8 +53,8 @@
 
       # 一般設定
       general = {
-        gaps_in = 5;
-        gaps_out = 5;
+        gaps_in = 10;
+        gaps_out = 10;
         border_size = 2;
         "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
         "col.inactive_border" = "rgba(595959aa)";

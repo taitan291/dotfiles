@@ -15,7 +15,6 @@
 
     ./nvim
     ./emacs
-    ./waybar
     ./starship.nix
     ./file-manager/yazi.nix
     ./file-manager/thunar.nix

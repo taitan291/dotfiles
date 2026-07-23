@@ -3,6 +3,8 @@
 in {
   imports = [
     (home + "/home.nix")
-    inputs.private-themes.homeModules.wallpaper
+    #(home + "/waybar")
+    #inputs.private-themes.homeModules.wallpaper
+    inputs.private-themes.homeModules.uindows-wallpaper
   ];
 }

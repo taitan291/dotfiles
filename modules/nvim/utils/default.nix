@@ -3,7 +3,7 @@
     name = "tobira";
     src = builtins.fetchGit {
       url = "https://github.com/kamegoro/tobira.nvim";
-      rev = "be62b9aedb6c6d50e77dfaa2e737c64f375e512d";
+      rev = "99d1f105ee6a2157cf48c2ec5861e6cf218e899b";
     };
   };
 in {

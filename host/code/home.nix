@@ -4,7 +4,7 @@ in {
   home = {
     stateVersion = "25.11";
 		username = "codespace";
-		home.homeDirectory = "/home/codespace";
+		homeDirectory = "/home/codespace";
     sessionVariables = {
       EDITOR = "nvim";
       #BROWSER = "brave";

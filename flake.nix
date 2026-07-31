@@ -85,7 +85,7 @@
 
       flake = let
         # ホスト名を受け取って nixosSystem を返すヘルパー関数
-        mkHost = host:
+        cofHost = host:
           inputs.nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = {inherit inputs;};
@@ -107,12 +107,27 @@
               }
             ];
           };
+        homeHost = host:
+          inputs.home-manager.lib.homeManagerConfiguration {
+            pkgs = import inputs.nixpkgs {
+              system = "x86_64-linux";
+              overlays = [ inputs.nur.overlays.default ];
+            };
+            modules = [
+              inputs.nixvim.homeModules.nixvim
+              ./host/${host}/home.nix
+            ];
+            extraSpecialArgs = { inherit inputs host; };
+          };
       in {
         nixosConfigurations = {
-          laptop = mkHost "laptop";
-          desktop = mkHost "desktop";
-          wsl = mkHost "wsl";
+          laptop = cofHost "laptop";
+          desktop = cofHost "desktop";
+          wsl = cofHost "wsl";
         };
+				homeConfigurations = {
+          code = homeHost "code";
+				};
       };
     };
 }

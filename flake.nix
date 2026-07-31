@@ -32,8 +32,14 @@
       url = "git+https://github.com/TaiTan291/dot-private-themes.git";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-		astal.url = "github:aylur/astal";
-    ags.url = "github:aylur/ags"; 
+    astal = {
+      url = "github:aylur/astal";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    ags = {
+      url = "github:aylur/ags";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {flake-parts, ...}:

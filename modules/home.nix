@@ -1,4 +1,4 @@
-{ inputs,...}: {
+{inputs, ...}: {
   home = {
     stateVersion = "25.11";
     username = "taitan";
@@ -28,7 +28,7 @@
     ./discord.nix
     ./wlogout
     ./firefox
-		./time.nix
+    ./time.nix
     #waybar
     inputs.private-themes.homeModules.uindows-waybar
     #inputs.private-themes.homeModules.wallpaper

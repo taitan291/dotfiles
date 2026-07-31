@@ -3,6 +3,6 @@
 in {
   imports = [
     (home + "/home.nix")
-		inputs.private-themes.homeModules.uindows-ags
+    inputs.private-themes.homeModules.uindows-ags
   ];
 }

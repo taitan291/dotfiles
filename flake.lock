@@ -348,11 +348,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785306346,
-        "narHash": "sha256-DScBkW0fOgpGPK2trNoX3ryLTlaC14+gglFo/BhGJ4g=",
+        "lastModified": 1785472055,
+        "narHash": "sha256-xU44Kgp7RPedzBjyRf+z7j97BgZ2R1J4fiqWUl/JNxI=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "e705714e918c3b11affcdd15db2cbe3a070420a0",
+        "rev": "2e6715977106c498355a70bcefd2c78a33c94558",
         "type": "github"
       },
       "original": {
@@ -439,11 +439,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1785354530,
-        "narHash": "sha256-yFhxFlTbDv7dOzSbLeCOyP2Xm01KTDW0z0CRiiMYhdg=",
+        "lastModified": 1785434837,
+        "narHash": "sha256-5xgKSbsFzLC9XvMH3iRhYuVBn4w0eo6LzuxY21uRIVw=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "2b1723adda7da821bb503ef4de7abb42d746ac51",
+        "rev": "8668a5392179f99fb9ab3699ede233484bee0b51",
         "type": "github"
       },
       "original": {
@@ -826,11 +826,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1785401041,
-        "narHash": "sha256-Lia9e2tTk2OveyDUf0MZtRScwKOp8ujwlVjvWE0mQx4=",
+        "lastModified": 1785472144,
+        "narHash": "sha256-1TU9SbGed2u32e5u8g4CrZXo8PDsM0VmPg6DhAhRByw=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "0885c82a13f4e63515a1fa3ae7ba2f9b15989691",
+        "rev": "d251448ddea94b47ec54426f3c177ea348f42cd4",
         "type": "github"
       },
       "original": {
@@ -873,11 +873,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1785401137,
-        "narHash": "sha256-JvUR/lMoC94sN6kICUCbOlnxjr6gMSLWssS8LLdxcFk=",
+        "lastModified": 1785407877,
+        "narHash": "sha256-NfKudxHOq6hXv3IMElLTtERJb9D+Pu0fncvbFiL7RjM=",
         "ref": "refs/heads/main",
-        "rev": "f5f6cb9efbcbcd658656debcdd5a20dc20069512",
-        "revCount": 7,
+        "rev": "256eb3d7a01484a977ef672afe5717ff0e2b5e78",
+        "revCount": 4,
         "type": "git",
         "url": "https://github.com/TaiTan291/dot-private-themes.git"
       },

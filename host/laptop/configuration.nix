@@ -9,6 +9,8 @@ in {
     (common + "/fonts.nix")
     (common + "/boot.nix")
     (common + "/display.nix")
+    (common + "/audio.nix")
+    (common + "/bluetooth.nix")
     (common + "/services.nix")
     (common + "/udev.nix")
     (common + "/environment.nix")

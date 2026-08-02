@@ -3,6 +3,5 @@
 in {
   imports = [
     (home + "/home.nix")
-    inputs.private-themes.homeModules.uindows-ags
   ];
 }

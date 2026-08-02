@@ -32,14 +32,14 @@
       url = "git+https://github.com/TaiTan291/dot-private-themes.git";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    astal = {
-      url = "github:aylur/astal";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    ags = {
-      url = "github:aylur/ags";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # astal = {
+    #   url = "github:aylur/astal";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+    # ags = {
+    #   url = "github:aylur/ags";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs = inputs @ {flake-parts, ...}:
@@ -111,13 +111,13 @@
           inputs.home-manager.lib.homeManagerConfiguration {
             pkgs = import inputs.nixpkgs {
               system = "x86_64-linux";
-              overlays = [ inputs.nur.overlays.default ];
+              overlays = [inputs.nur.overlays.default];
             };
             modules = [
               inputs.nixvim.homeModules.nixvim
               ./host/${host}/home.nix
             ];
-            extraSpecialArgs = { inherit inputs host; };
+            extraSpecialArgs = {inherit inputs host;};
           };
       in {
         nixosConfigurations = {
@@ -125,9 +125,9 @@
           desktop = cofHost "desktop";
           wsl = cofHost "wsl";
         };
-				homeConfigurations = {
+        homeConfigurations = {
           code = homeHost "code";
-				};
+        };
       };
     };
 }

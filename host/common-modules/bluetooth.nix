@@ -1,12 +1,25 @@
-{ ... }:
-
-{
-  # Bluetooth機能の有効化
+{pkgs, ...}: {
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
+    settings = {
+      General = {
+        Enable = "Source,Sink,Media,Socket";
+        Privacy = "device";
+        JustWorksRepairing = "always";
+        FastConnectable = true;
+        ControllerMode = "dual";
+        ClassicBondedOnly = false;
+      };
+    };
   };
+  environment.systemPackages = with pkgs; [
+    adwaita-icon-theme
+    hicolor-icon-theme
+  ];
 
-  # Bluetooth GUIマネージャー(blueman)の有効化
+  environment.pathsToLink = [
+    "/share/icons"
+  ];
   services.blueman.enable = true;
 }

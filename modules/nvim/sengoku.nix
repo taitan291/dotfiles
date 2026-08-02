@@ -9,7 +9,7 @@
 in {
   programs.nixvim = {
     extraPlugins = [
-			sengoku
+      sengoku
     ];
   };
 }

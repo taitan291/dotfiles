@@ -3,8 +3,8 @@ _: let
 in {
   home = {
     stateVersion = "25.11";
-		username = "codespace";
-		homeDirectory = "/home/codespace";
+    username = "codespace";
+    homeDirectory = "/home/codespace";
     sessionVariables = {
       EDITOR = "nvim";
       #BROWSER = "brave";

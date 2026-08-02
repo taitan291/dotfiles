@@ -22,6 +22,6 @@
     ./typst
     ./options.nix
     ./completion.nix
-		./sengoku.nix
+    ./sengoku.nix
   ];
 }

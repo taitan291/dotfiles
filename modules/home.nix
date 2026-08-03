@@ -29,10 +29,9 @@
     ./wlogout
     ./firefox
     ./time.nix
-		#inputs.private-themes.homeManagerModules.wallpaper
+    #inputs.private-themes.homeManagerModules.wallpaper
     #./waybar
-		./uindows.nix
-
+    ./uindows.nix
   ];
   programs.home-manager.enable = true;
 }

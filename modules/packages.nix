@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     mission-center
-    anki
+    #anki
     firefox
     brave
     slack

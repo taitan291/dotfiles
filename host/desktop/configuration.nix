@@ -1,5 +1,6 @@
 {...}: let
   common = ../common-modules;
+  home = ../../modules;
 in {
   imports = [
     ./hardware-configuration.nix
@@ -19,5 +20,7 @@ in {
     (common + "/nix_ld.nix")
     ../laptop/modules/graphics.nix
     ./modules/nvidia.nix
+
+    (home + "/steam")
   ];
 }

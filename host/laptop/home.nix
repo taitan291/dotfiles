@@ -2,6 +2,6 @@
   home = ../../modules;
 in {
   imports = [
-    (home + "/home.nix")
+    (home + "/path.nix")
   ];
 }

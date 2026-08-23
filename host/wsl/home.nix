@@ -2,7 +2,7 @@ _: let
   home = ../../modules;
 in {
   home = {
-    stateVersion = "25.11";
+    stateVersion = "26.11";
     username = "taitan";
     homeDirectory = "/home/taitan";
     sessionVariables = {

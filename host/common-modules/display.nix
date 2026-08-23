@@ -19,7 +19,7 @@ in {
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = false;
-    theme = "sddm-uindows-theme";
+    #theme = "sddm-uindows-theme";
     package = pkgs.kdePackages.sddm;
   };
   environment.systemPackages = [

@@ -1,15 +1,15 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
+    fastfetch
+
     mission-center
     #anki
-    firefox
+    #firefox
     brave
-    slack
+    #slack
     wine
     librsvg
     prismlauncher
     vscode
-
-    # EX
   ];
 }

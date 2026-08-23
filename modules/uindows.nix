@@ -7,5 +7,6 @@
     wallpapers.enable = true;
     waybar.enable = false;
     quickshell.enable = true;
+    firefox.enable = true;
   };
 }

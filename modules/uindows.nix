@@ -8,5 +8,7 @@
     waybar.enable = false;
     quickshell.enable = true;
     firefox.enable = true;
+    hyprland = "hyprlang";
+    # hyprland = "lua";
   };
 }

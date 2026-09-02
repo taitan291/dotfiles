@@ -45,5 +45,5 @@ hl.bind("SUPER + mouse_scroll_up", hl.dsp.exec_cmd("hyprctl dispatch workspace e
 hl.bind("SUPER + mouse_scroll_down", hl.dsp.exec_cmd("hyprctl dispatch workspace e-1"))
 
 -- マウスドラッグ
--- hl.bindm("SUPER + mouse:272", hl.dsp.window.move())
--- hl.bindm("SUPER + mouse:273", hl.dsp.window.resize())
+hl.bindm("SUPER + mouse:272", hl.dsp.window.move())
+hl.bindm("SUPER + mouse:273", hl.dsp.window.resize())

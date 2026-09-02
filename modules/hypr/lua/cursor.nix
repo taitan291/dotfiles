@@ -5,6 +5,7 @@
 }: {
   home = {
     pointerCursor = {
+      enable = true;
       gtk.enable = true;
       x11.enable = true;
 
@@ -19,10 +20,8 @@
     plugins = [
       inputs.hypr-dynamic-cursors.packages.${pkgs.stdenv.hostPlatform.system}.hypr-dynamic-cursors
     ];
-    settings = {
-      extraConfig = ''
-        ${builtins.readFile ./config/plugin-cursors.lua}
-      '';
-    };
+    extraConfig = ''
+      ${builtins.readFile ./config/plugin-cursors.lua}
+    '';
   };
 }

@@ -7,9 +7,9 @@
   programs.hyprshot = {
     enable = true;
   };
-  # wayland.windowManager.hyprland.settings = {
-  #   extraConfig = ''
-  #     ${builtins.readFile ./config/shot.lua}
-  #   '';
-  # };
+  wayland.windowManager.hyprland = {
+    extraConfig = ''
+      ${builtins.readFile ./config/shot.lua}
+    '';
+  };
 }

@@ -11,5 +11,7 @@
     librsvg
     prismlauncher
     vscode
+
+    codex
   ];
 }

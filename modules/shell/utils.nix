@@ -37,15 +37,12 @@
       la = "eza -a";
       cat = "bat";
 
-      sl = "ls && sl";
       lgit = "lazygit";
     };
     packages = with pkgs; [
       hunspell
       git-graph
       lazygit
-      gti
-      sl
 
       ripgrep
       tokei

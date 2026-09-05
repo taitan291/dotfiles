@@ -33,10 +33,6 @@ in {
   home = {
     shellAliases = {
       nd = "nix develop -c zsh";
-      # rebuild =
-      #   if host == "wsl"
-      #   then "sudo nixos-rebuild switch --flake .#wsl"
-      #   else "sudo nixos-rebuild switch --flake ~/.config/nixos/.#${host}";
     };
   };
 }

@@ -14,7 +14,7 @@
     ./xdg.nix
 
     ./nvim
-    ./emacs
+    # ./emacs
     ./starship.nix
     ./file-manager/yazi.nix
     ./file-manager/thunar.nix
@@ -22,8 +22,8 @@
     ./git.nix
     ./shell/zsh.nix
     ./shell/utils.nix
-    ./hypr/hyprlang
-    # ./hypr/lua
+    # ./hypr/hyprlang
+    ./hypr/lua
     ./fcitx5
     ./wofi.nix
     ./discord.nix
@@ -31,7 +31,7 @@
     ./time.nix
     # inputs.private-themes.homeManagerModules.wallpaper
     # ./waybar
-		./uindows.nix
+    ./uindows.nix
   ];
   programs.home-manager.enable = true;
 }

@@ -2,6 +2,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd(
 		"dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP HYPRLAND_INSTANCE_SIGNATURE"
 	)
+	hl.exec_cmd("systemctl --user unset-environment GTK_IM_MODULE QT_IM_MODULE")
 	hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 	hl.exec_cmd("nm-applet")
 	hl.exec_cmd("dunst")
@@ -9,9 +10,11 @@ hl.on("hyprland.start", function()
 	-- hl.exec_cmd("hyprctl setcursor breeze_cursors 24")
 end)
 
--- hl.env("XDG_SESSION_TYPE", "wayland")
--- hl.env("XDG_SESSION_DESKTOP", "Hyprland")
--- hl.env("XDG_CURRENT_TYPE", "Hyprland")
+hl.env("XDG_SESSION_TYPE", "wayland")
+hl.env("XDG_SESSION_DESKTOP", "Hyprland")
+hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
+-- GTK_IM_MODULE と QT_IM_MODULE は Wayland frontend が自動処理するため設定しない
+hl.env("XMODIFIERS", "@im=fcitx5")
 
 hl.config({
 	misc = {

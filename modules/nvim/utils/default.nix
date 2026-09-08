@@ -58,6 +58,7 @@ in {
   imports = [
     ./keymaps.nix
 
+    ./unicode
     ./tobira
   ];
 }

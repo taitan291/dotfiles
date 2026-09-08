@@ -10,7 +10,7 @@
     wine
     librsvg
     prismlauncher
-    vscode
+    # vscode
 
     codex
   ];

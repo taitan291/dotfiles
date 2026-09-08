@@ -1,4 +1,10 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: let
+  plymouth-uindows = inputs.private-themes.packages.${pkgs.system}.plymouth-uindows-theme;
+in {
   boot.loader = {
     timeout = 60;
     efi = {
@@ -16,14 +22,13 @@
 
   boot.plymouth = {
     enable = true;
-    theme = "matrix";
+    # theme = "matrix";
+    theme = "plymouth-uindows-theme";
     themePackages = [
-      pkgs.plymouth-matrix-theme
+      # pkgs.plymouth-matrix-theme
+      plymouth-uindows
     ];
   };
-  environment.systemPackages = [
-    pkgs.plymouth-matrix-theme
-  ];
   boot.initrd.verbose = false;
   boot.initrd.systemd.enable = true;
 

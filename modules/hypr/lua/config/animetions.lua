@@ -40,10 +40,17 @@ hl.curve("quick", {
 })
 
 -- Animations
+hl.config({
+	animations = {
+		enabled = true,
+	},
+})
+
 hl.animation({
 	leaf = "global",
 	enabled = true,
 	speed = 10,
+	bezier = "linear",
 })
 
 hl.animation({

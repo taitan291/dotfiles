@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   home = {
     packages = with pkgs; [
+      hyprshot # スクリーンショット
       pavucontrol # 音量調整(GUI)
       playerctl # 音量調整(CUI)
       alsa-utils
@@ -12,7 +13,7 @@
   imports = [
     ./shot.nix
     ./land.nix
-    # ./cursor.nix
+    ./cursor.nix
     ./lock.nix
     ./sounds.nix
   ];

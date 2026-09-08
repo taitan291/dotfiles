@@ -18,6 +18,7 @@ in {
     (common + "/nix.nix")
     (common + "/system.nix")
     (common + "/nix_ld.nix")
+    (common + "/battery.nix")
     ./modules/graphics.nix
 
     (home + "/steam")

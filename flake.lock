@@ -797,11 +797,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1788837671,
-        "narHash": "sha256-nWlALJ3akuL6I7KnBqwB6IAi7m+ia9fhNnB1ZNKroNU=",
+        "lastModified": 1788953984,
+        "narHash": "sha256-DG9oWaVs61f/KaRw0zbIyWKYB02XXZMQje/HJFoxY+Y=",
         "ref": "refs/heads/main",
-        "rev": "4b268c570dcfac4da647d052b519b3dd52614dca",
-        "revCount": 38,
+        "rev": "4626c5927d2a79f6b1ad3ef3861573d2c6da559d",
+        "revCount": 44,
         "type": "git",
         "url": "https://github.com/TaiTan291/dot-private-themes.git"
       },

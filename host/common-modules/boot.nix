@@ -16,6 +16,7 @@ in {
       efiSupport = true;
       device = "nodev";
       useOSProber = true;
+      configurationLimit = 5;
     };
   };
   boot.kernelPackages = pkgs.linuxPackages_latest;

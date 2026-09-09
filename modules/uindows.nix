@@ -13,7 +13,6 @@
     wallpapers.enable = true;
     quickshell.enable = true;
     firefox.enable = true;
-    hyprland = "lua";
     resolution =
       if host == "laptop"
       then "19201200"

@@ -22,8 +22,7 @@
     ./git.nix
     ./shell/zsh.nix
     ./shell/utils.nix
-    # ./hypr/hyprlang
-    ./hypr/lua
+    ./hypr
     ./fcitx5
     ./wofi.nix
     ./discord.nix

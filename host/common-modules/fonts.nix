@@ -1,7 +1,8 @@
 {pkgs, ...}: {
   fonts = {
     packages = with pkgs; [
-      ipaexfont
+      jetbrains-mono
+      mplus-outline-fonts.githubRelease
       noto-fonts-cjk-serif
       noto-fonts-cjk-sans
     ];
@@ -14,6 +15,11 @@
         ];
         sansSerif = [
           "Noto Sans CJK JP"
+          "Noto Color Emoji"
+        ];
+        monospace = [
+          "Noto Sans Mono CJK JP"
+          "JetBrains Mono"
           "Noto Color Emoji"
         ];
       };

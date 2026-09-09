@@ -3,7 +3,7 @@ _: {
     enable = true;
     settings = {
       # フォント設定
-      font-family = "Hack Nerd Font";
+      font-family = "M PLUS 1 Code";
       font-size = 14;
       # テーマ設定 (Ghosttyは標準で多数のテーマを内蔵)
       theme = "Catppuccin Mocha";

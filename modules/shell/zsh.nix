@@ -28,7 +28,10 @@ in {
       # ミスしたときのういビームの停止
       "no_beep"
     ];
-    initContent = (builtins.readFile ./zshrc.zsh) + "\n" + rebuildFunc;
+    initContent =
+      (builtins.readFile ./zshrc.zsh)
+      + "\nexport LC_MESSAGES=en_US.UTF-8\n"
+      + rebuildFunc;
   };
   home = {
     shellAliases = {

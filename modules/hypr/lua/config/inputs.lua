@@ -1,7 +1,7 @@
 hl.config({
 	input = {
 		kb_layout = "jp",
-		kb_variant = "",
+		kb_variant = "106",
 		kb_rules = "evdev",
 		kb_options = "ctrl:nocaps",
 		follow_mouse = 1,

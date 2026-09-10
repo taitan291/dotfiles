@@ -13,6 +13,7 @@
   imports = [
     ./shot.nix
     ./land.nix
+    # ./space.nix
     ./cursor.nix
     ./lock.nix
     ./sounds.nix

@@ -2,6 +2,10 @@
   common = ../common-modules;
   home = ../../modules;
 in {
+  nixpkgs.overlays = [
+    (import ../../overlays/libfprint-etu906axx-e.nix)
+  ];
+
   imports = [
     ./hardware-configuration.nix
 
@@ -20,6 +24,7 @@ in {
     (common + "/nix_ld.nix")
     (common + "/battery.nix")
     ./modules/graphics.nix
+    # ./modules/fingerprint.nix
 
     (home + "/steam")
   ];

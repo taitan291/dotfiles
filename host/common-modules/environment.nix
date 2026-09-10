@@ -13,6 +13,7 @@
       wl-clipboard
       ripgrep
       os-prober
+      usbutils
     ];
   };
 }

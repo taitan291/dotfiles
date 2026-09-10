@@ -4,6 +4,5 @@ _: {
       HandleLidSwitch = "suspend";
     };
   };
-
   programs.dconf.enable = true;
 }

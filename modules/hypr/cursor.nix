@@ -19,15 +19,12 @@ in {
   };
 
   wayland.windowManager.hyprland = {
-    # `ecosystem.enforce_permissions` is enabled in settings.lua. Load this
-    # plugin only after granting permission for its immutable Nix store path.
-    # Using `plugins` would make Home Manager load it before extraConfig.
     extraConfig = ''
-      hl.permission({
-        binary = "${plugin}/lib/libhypr-dynamic-cursors.so",
-        type = "plugin",
-        mode = "allow",
-      })
+      -- hl.permission({
+      --   binary = "${plugin}/lib/libhypr-dynamic-cursors.so",
+      --   type = "plugin",
+      --	 mode = "allow",
+      -- })
       hl.plugin.load("${plugin}/lib/libhypr-dynamic-cursors.so")
       ${builtins.readFile ./config/plugin-cursors.lua}
     '';

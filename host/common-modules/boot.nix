@@ -3,7 +3,7 @@
   inputs,
   ...
 }: let
-  plymouth-uindows = inputs.private-themes.packages.${pkgs.system}.plymouth-uindows-theme;
+  plymouth-uindows = inputs.private-themes.packages.${pkgs.stdenv.hostPlatform.system}.plymouth-uindows-theme;
 in {
   boot.loader = {
     timeout = 60;

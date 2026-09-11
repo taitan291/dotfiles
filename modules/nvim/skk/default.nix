@@ -8,11 +8,11 @@
   };
 in {
   programs.nixvim = {
-    extraPlugins = with pkgs.vimPlugins; [
+    extraPlugins = [
       skkeleton
-      denops-vim
-      ddc-vim
-      ddc-ui-native
+      pkgs.vimPlugins.denops-vim
+      pkgs.vimPlugins.ddc-vim
+      pkgs.vimPlugins.ddc-ui-native
     ];
     extraPackages = with pkgs; [
       deno

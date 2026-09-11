@@ -28,7 +28,7 @@
       require('typst-preview').setup {
         -- nixpkgs経由でインストールしたtinymistのパスを明示的に指定し連携
         dependencies_bin = {
-          ['tinymist'] = "${pkgs.tinymist}/bin/tinymist",
+          ['tinymist'] = "${pkgs.lib.getExe pkgs.tinymist}",
         },
       }
     '';

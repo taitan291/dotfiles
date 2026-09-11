@@ -20,8 +20,8 @@
   };
 in {
   programs.nixvim = {
-    extraPlugins = with pkgs.vimPlugins; [
-      copilot-lua
+    extraPlugins = [
+      pkgs.vimPlugins.copilot-lua
       plenary-nvim
       copilotChat-nvim
     ];

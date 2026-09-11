@@ -90,7 +90,6 @@
         # ホスト名を受け取って nixosSystem を返すヘルパー関数
         cofHost = host:
           inputs.nixpkgs.lib.nixosSystem {
-            system = "x86_64-linux";
             specialArgs = {inherit inputs;};
             modules = [
               ./host/${host}/configuration.nix

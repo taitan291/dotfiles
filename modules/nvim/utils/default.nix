@@ -1,14 +1,6 @@
-{pkgs, ...}: let
-  tobira = pkgs.vimUtils.buildVimPlugin {
-    name = "tobira";
-    src = builtins.fetchGit {
-      url = "https://github.com/kamegoro/tobira.nvim";
-      rev = "1cbe7bd90f598ab7150bfa394a947557cb4e768d";
-    };
-  };
-in {
+{pkgs, ...}: {
   programs.nixvim = {
-    extraPlugins = [
+    extraPlugins = with pkgs.vimPlugins; [
       tobira
     ];
     plugins = {

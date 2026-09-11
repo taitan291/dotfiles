@@ -23,10 +23,8 @@ in {
 
   boot.plymouth = {
     enable = true;
-    # theme = "matrix";
     theme = "plymouth-uindows-theme";
     themePackages = [
-      # pkgs.plymouth-matrix-theme
       plymouth-uindows
     ];
   };

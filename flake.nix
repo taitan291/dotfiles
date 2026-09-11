@@ -39,8 +39,8 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    private-themes = {
-      url = "git+https://github.com/TaiTan291/dot-private-themes.git";
+    uindows-themes = {
+      url = "git+https://github.com/TaiTan291/UindowsOS-themes.git";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

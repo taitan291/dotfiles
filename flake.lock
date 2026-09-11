@@ -200,7 +200,7 @@
       "inputs": {
         "flake-compat": "flake-compat_4",
         "nixpkgs": [
-          "private-themes",
+          "uindows-themes",
           "nixpkgs"
         ]
       },
@@ -757,7 +757,7 @@
         "type": "github"
       }
     },
-    "private-themes": {
+    "uindows-themes": {
       "inputs": {
         "flake-parts": "flake-parts_4",
         "git-hooks-nix": "git-hooks-nix_2",
@@ -773,11 +773,11 @@
         "rev": "15a652ae55fb1f8d923e4b2d0e90de0e972a5080",
         "revCount": 51,
         "type": "git",
-        "url": "https://github.com/TaiTan291/dot-private-themes.git"
+        "url": "https://github.com/TaiTan291/UindowsOS-themes.git"
       },
       "original": {
         "type": "git",
-        "url": "https://github.com/TaiTan291/dot-private-themes.git"
+        "url": "https://github.com/TaiTan291/UindowsOS-themes.git"
       }
     },
     "root": {
@@ -791,7 +791,7 @@
         "nixpkgs": "nixpkgs_3",
         "nixvim": "nixvim",
         "nur": "nur",
-        "private-themes": "private-themes",
+        "uindows-themes": "uindows-themes",
         "treefmt-nix": "treefmt-nix_2"
       }
     },
@@ -830,7 +830,7 @@
     "treefmt-nix": {
       "inputs": {
         "nixpkgs": [
-          "private-themes",
+          "uindows-themes",
           "nixpkgs"
         ]
       },

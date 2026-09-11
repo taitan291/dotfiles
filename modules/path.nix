@@ -14,7 +14,7 @@
     ./xdg.nix
 
     ./nvim
-    # ./emacs
+    ./emacs
     ./starship.nix
     ./file-manager/yazi.nix
     ./file-manager/thunar.nix
@@ -28,8 +28,7 @@
     ./discord.nix
     ./wlogout
     ./time.nix
-    # inputs.private-themes.homeManagerModules.wallpaper
-    # ./waybar
+
     ./uindows.nix
   ];
   programs.home-manager.enable = true;

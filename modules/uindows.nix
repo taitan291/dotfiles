@@ -6,7 +6,7 @@
   ...
 }: {
   imports = [
-    inputs.private-themes.homeManagerModules.uindows
+    inputs.uindows-themes.homeManagerModules.uindows
   ];
 
   uindows = {

@@ -3,7 +3,7 @@
   home = ../../modules;
 in {
   nixpkgs.overlays = [
-    (import ../../overlays/libfprint-etu906axx-e.nix)
+    (import ./modules/overlays.nix)
   ];
 
   imports = [

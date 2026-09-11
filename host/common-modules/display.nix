@@ -3,7 +3,7 @@
   inputs,
   ...
 }: let
-  sddm-uindows = inputs.private-themes.packages.${pkgs.system}.sddm-uindows-theme;
+  sddm-uindows = inputs.private-themes.packages.${pkgs.stdenv.hostPlatform.system}.sddm-uindows-theme;
 in {
   services.xserver = {
     enable = true;

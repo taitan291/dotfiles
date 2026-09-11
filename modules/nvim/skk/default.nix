@@ -1,18 +1,10 @@
-{pkgs, ...}: let
-  skkeleton = pkgs.vimUtils.buildVimPlugin {
-    name = "skkeleton";
-    src = builtins.fetchGit {
-      url = "https://github.com/vim-skk/skkeleton";
-      rev = "42b7b62062e5eb4ba157b9e8d12a104777bbd9b3";
-    };
-  };
-in {
+{pkgs, ...}: {
   programs.nixvim = {
-    extraPlugins = [
+    extraPlugins = with pkgs.vimPlugins; [
       skkeleton
-      pkgs.vimPlugins.denops-vim
-      pkgs.vimPlugins.ddc-vim
-      pkgs.vimPlugins.ddc-ui-native
+      denops-vim
+      ddc-vim
+      ddc-ui-native
     ];
     extraPackages = with pkgs; [
       deno

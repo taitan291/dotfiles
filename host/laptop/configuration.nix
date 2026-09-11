@@ -23,6 +23,7 @@ in {
     (common + "/system.nix")
     (common + "/nix_ld.nix")
     (common + "/battery.nix")
+    (common + "/overlays.nix")
     ./modules/graphics.nix
     # ./modules/fingerprint.nix
 

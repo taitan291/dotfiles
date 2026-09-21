@@ -9,6 +9,7 @@
           lua_ls.enable = true; # Lua用
           pyright.enable = true; # Python用
           clangd.enable = true; # C/C++用
+          gopls.enable = true; # Go用
           astro.enable = true; # Astro用
           svelte.enable = true; # svelte
           tailwindcss.enable = true; #tailwindcss

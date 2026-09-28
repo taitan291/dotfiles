@@ -1,4 +1,9 @@
-{...}: {
+{pkgs, ...}: {
+  environment.systemPackages = with pkgs; [
+    qpwgraph
+    wiremix
+  ];
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;

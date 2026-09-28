@@ -30,6 +30,7 @@
     ./time.nix
 
     ./uindows.nix
+    ./ui_roid.nix
   ];
   programs.home-manager.enable = true;
 }

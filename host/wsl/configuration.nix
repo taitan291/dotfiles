@@ -8,5 +8,6 @@ in {
     (common + "/users.nix")
     (common + "/environment.nix")
     (common + "/nix.nix")
+    (common + "/overlays.nix")
   ];
 }

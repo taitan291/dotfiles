@@ -1,4 +1,4 @@
-_: let
+{ pkgs, ... }: let
   home = ../../modules;
 in {
   home = {
@@ -22,5 +22,8 @@ in {
     (home + "/shell/zsh.nix")
     (home + "/shell/utils.nix")
   ];
+  home.packages = with pkgs; [
+    codex
+	];
   programs.home-manager.enable = true;
 }

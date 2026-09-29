@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   programs.nixvim = {
     extraPlugins = with pkgs.vimPlugins; [
       tobira
@@ -15,9 +19,12 @@
       };
       treesitter = {
         enable = true;
-        settings.ensure_installed = ["svelte" "html" "css" "javascript" "typescript"];
+        settings = {
+          ensure_installed = ["svelte" "html" "css" "javascript" "typescript"];
+          highlight.enable = true;
+        };
         grammarPackages = [
-          pkgs.vimPlugins.nvim-treesitter.builtGrammars.svelte
+          config.programs.nixvim.plugins.treesitter.package.builtGrammars.svelte
         ];
       };
       mini = {

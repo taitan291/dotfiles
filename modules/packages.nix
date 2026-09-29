@@ -3,8 +3,9 @@
     fastfetch
 
     mission-center
+    btop
+
     #anki
-    #firefox
     brave
     #slack
     wine

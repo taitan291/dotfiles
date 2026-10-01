@@ -4,9 +4,9 @@
   ...
 }: {
   programs.nixvim = {
-    extraPlugins = with pkgs.vimPlugins; [
-      tobira
-    ];
+    # extraPlugins = with pkgs.vimPlugins; [
+    #   tobira
+    # ];
     plugins = {
       toggleterm = {
         enable = true;
@@ -58,6 +58,6 @@
     ./keymaps.nix
 
     ./unicode
-    ./tobira
+    # ./tobira
   ];
 }

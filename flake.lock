@@ -658,6 +658,26 @@
         "type": "github"
       }
     },
+    "ms-office": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1790300739,
+        "narHash": "sha256-Ra/+V+VrlIICwUjLlruM2AtfpnAZUVGVymKnPS1u4hA=",
+        "owner": "Tombert",
+        "repo": "office365_flake",
+        "rev": "f496de480e36216ff02ad70943aa46ec57d671ad",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Tombert",
+        "repo": "office365_flake",
+        "type": "github"
+      }
+    },
     "nixos-wsl": {
       "inputs": {
         "flake-compat": "flake-compat_4",
@@ -859,6 +879,7 @@
         "home-manager": "home-manager",
         "hypr-dynamic-cursors": "hypr-dynamic-cursors",
         "hyprland": "hyprland",
+        "ms-office": "ms-office",
         "nixos-wsl": "nixos-wsl",
         "nixpkgs": "nixpkgs_3",
         "nixvim": "nixvim",

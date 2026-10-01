@@ -1,4 +1,4 @@
-{ pkgs, ... }: let
+{pkgs, ...}: let
   home = ../../modules;
 in {
   home = {
@@ -24,6 +24,6 @@ in {
   ];
   home.packages = with pkgs; [
     codex
-	];
+  ];
   programs.home-manager.enable = true;
 }

@@ -31,6 +31,7 @@
 
     ./uindows.nix
     ./ui_roid.nix
+    ./ms-office.nix
   ];
   programs.home-manager.enable = true;
 }

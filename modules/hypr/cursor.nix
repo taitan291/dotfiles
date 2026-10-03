@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  lib,
   ...
 }: let
   dynamic-cursors =
@@ -20,15 +21,13 @@ in {
   };
 
   wayland.windowManager.hyprland = {
-    plugins = [
-      dynamic-cursors
-    ];
-    extraConfig = ''
+    extraConfig = lib.mkAfter ''
       hl.permission({
         binary = "${dynamic-cursors}/lib/libhypr-dynamic-cursors.so",
         type = "plugin",
         mode = "allow",
       })
+      hl.plugin.load("${dynamic-cursors}/lib/libhypr-dynamic-cursors.so")
       ${builtins.readFile ./config/plugin-cursors.lua}
     '';
   };

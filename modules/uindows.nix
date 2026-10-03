@@ -1,8 +1,6 @@
 {
   inputs,
   host,
-  pkgs,
-  lib,
   ...
 }: {
   imports = [
@@ -18,14 +16,6 @@
       then "19201200"
       else "19201080";
   };
-
-  home.packages = with pkgs; [
-    quickshell
-    material-icons
-    material-symbols
-    qt6.qtdeclarative
-    qt6.qtwayland
-  ];
 
   fonts.fontconfig.enable = true;
 }

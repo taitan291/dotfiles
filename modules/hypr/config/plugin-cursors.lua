@@ -23,17 +23,19 @@ if hl.plugin.dynamic_cursors then
 					window = 100,
 				},
 
-				shake = {
-					enabled = true,
-					threshold = 6.0,
-					base = 4.0,
-					speed = 4.0,
-					influence = 0.0,
-					limit = 0.0,
-					timeout = 2000,
-					effects = false,
-					ipc = false,
-				},
+				--[[
+			shake = {
+				enabled = true,
+				threshold = 6.0,
+				base = 4.0,
+				speed = 4.0,
+				influence = 0.0,
+				limit = 0.0,
+				timeout = 2000,
+				effects = false,
+				ipc = false,
+			},
+			]]
 
 				hyprcursor = {
 					nearest = 1,

@@ -43,11 +43,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1790988213,
-        "narHash": "sha256-hIsxVPEpnQ0nGsx1UcQRQMQ6o+nDFWSbBAvsG1+TdEk=",
+        "lastModified": 1790991026,
+        "narHash": "sha256-dJW52MfcPL/Lg3nyn/KJOxxvKIjCzyw1XhXLGJ0RMYk=",
         "ref": "refs/heads/main",
-        "rev": "25b5266d7c811771ac5a4ab1cd840f8e5db40245",
-        "revCount": 18,
+        "rev": "1fc93725ce7050c2c1492cd97f8366e1abe6097e",
+        "revCount": 19,
         "type": "git",
         "url": "https://github.com/TaiTan291/assistant-ui.git"
       },

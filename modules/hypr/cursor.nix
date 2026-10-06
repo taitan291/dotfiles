@@ -1,12 +1,8 @@
 {
   pkgs,
-  inputs,
   lib,
   ...
-}: let
-  dynamic-cursors =
-    inputs.hypr-dynamic-cursors.packages.${pkgs.stdenv.hostPlatform.system}.hypr-dynamic-cursors;
-in {
+}: {
   home = {
     pointerCursor = {
       enable = true;
@@ -22,13 +18,10 @@ in {
 
   wayland.windowManager.hyprland = {
     extraConfig = lib.mkAfter ''
-      hl.permission({
-        binary = "${dynamic-cursors}/lib/libhypr-dynamic-cursors.so",
-        type = "plugin",
-        mode = "allow",
-      })
-      hl.plugin.load("${dynamic-cursors}/lib/libhypr-dynamic-cursors.so")
-      ${builtins.readFile ./config/plugin-cursors.lua}
+      hl.env("XCURSOR_THEME", "Bibata-Modern-Classic")
+      hl.env("XCURSOR_SIZE", "24")
+      hl.env("HYPRCURSOR_THEME", "Bibata-Modern-Classic")
+      hl.env("HYPRCURSOR_SIZE", "24")
     '';
   };
 }

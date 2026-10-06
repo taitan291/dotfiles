@@ -1,32 +1,18 @@
-{...}: let
-  common = ../common-modules;
-  home = ../../modules;
-in {
+{
+  networking.hostName = "laptop";
+  boot.kernelParams = [
+    "i915.force_probe=!7d55"
+    "xe.force_probe=7d55"
+  ];
+
   nixpkgs.overlays = [
     (import ./modules/overlays.nix)
   ];
 
   imports = [
     ./hardware-configuration.nix
-
-    (common + "/i18n.nix")
-    (common + "/users.nix")
-    (common + "/fonts.nix")
-    (common + "/boot.nix")
-    (common + "/display.nix")
-    (common + "/audio.nix")
-    (common + "/bluetooth.nix")
-    (common + "/services.nix")
-    (common + "/udev.nix")
-    (common + "/environment.nix")
-    (common + "/nix.nix")
-    (common + "/system.nix")
-    (common + "/nix_ld.nix")
-    (common + "/battery.nix")
-    (common + "/overlays.nix")
-    ./modules/graphics.nix
+    ../common-modules
     # ./modules/fingerprint.nix
-
-    (home + "/steam")
+    ../../modules/steam
   ];
 }

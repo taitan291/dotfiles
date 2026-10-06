@@ -12,6 +12,7 @@
     librsvg
     prismlauncher
     # vscode
+    claude-code
     codex
 
     bitwarden-desktop

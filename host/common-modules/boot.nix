@@ -1,10 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: let
-  plymouth-uindows = inputs.uindows-themes.packages.${pkgs.stdenv.hostPlatform.system}.plymouth-uindows-theme;
-in {
+{pkgs, ...}: {
   boot.loader = {
     timeout = 60;
     efi = {
@@ -25,7 +19,7 @@ in {
     enable = true;
     theme = "plymouth-uindows-theme";
     themePackages = [
-      plymouth-uindows
+      pkgs.plymouth-uindows-theme
     ];
   };
   boot.initrd.verbose = false;
@@ -40,8 +34,5 @@ in {
     "rd.systemd.show_status=false"
     "rd.udev.log_level=3"
     "udev.log_priority=3"
-
-    "i915.force_probe=!7d55"
-    "xe.force_probe=7d55"
   ];
 }

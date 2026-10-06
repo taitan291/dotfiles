@@ -1,6 +1,5 @@
 {...}: {
   networking.networkmanager.enable = true;
-  networking.hostName = "nixos";
 
   time.timeZone = "Asia/Tokyo";
 

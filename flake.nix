@@ -12,10 +12,6 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    ms-office = {
-      url = "github:Tombert/office365_flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     hyprland = {
       url = "github:hyprwm/Hyprland";
     };
@@ -27,10 +23,6 @@
     #   url = "github:KZDKM/Hyprspace";
     #   inputs.hyprland.follows = "hyprland";
     # };
-    hypr-dynamic-cursors = {
-      url = "github:VirtCode/hypr-dynamic-cursors";
-      inputs.hyprland.follows = "hyprland";
-    };
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -55,7 +47,11 @@
 
   outputs = inputs @ {flake-parts, ...}:
     flake-parts.lib.mkFlake {inherit inputs;} {
-      systems = ["x86_64-linux"];
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "aarch64-darwin"
+      ];
       imports = [
         inputs.treefmt-nix.flakeModule
         inputs.git-hooks-nix.flakeModule
@@ -96,12 +92,11 @@
 
       flake = let
         # ホスト名を受け取って nixosSystem を返すヘルパー関数
-        cofHost = host:
+        Host = host:
           inputs.nixpkgs.lib.nixosSystem {
             specialArgs = {inherit inputs;};
             modules = [
               ./host/${host}/configuration.nix
-              {nixpkgs.overlays = [inputs.nur.overlays.default];}
               inputs.home-manager.nixosModules.home-manager
               {
                 home-manager = {
@@ -117,27 +112,13 @@
               }
             ];
           };
-        homeHost = host:
-          inputs.home-manager.lib.homeManagerConfiguration {
-            pkgs = import inputs.nixpkgs {
-              system = "x86_64-linux";
-              overlays = [inputs.nur.overlays.default];
-            };
-            modules = [
-              inputs.nixvim.homeModules.nixvim
-              ./host/${host}/home.nix
-            ];
-            extraSpecialArgs = {inherit inputs host;};
-          };
       in {
         nixosConfigurations = {
-          laptop = cofHost "laptop";
-          desktop = cofHost "desktop";
-          wsl = cofHost "wsl";
+          laptop = Host "laptop";
+          desktop = Host "desktop";
+          wsl = Host "wsl";
         };
-        homeConfigurations = {
-          code = homeHost "code";
-        };
+        homeManagerModules.nvim = import ./modules/nvim/default.nix;
       };
     };
 }

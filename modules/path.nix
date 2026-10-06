@@ -1,27 +1,12 @@
-{inputs, ...}: {
-  home = {
-    stateVersion = "26.11";
-    username = "taitan";
-    homeDirectory = "/home/taitan";
-    sessionVariables = {
-      EDITOR = "nvim";
-      BROWSER = "brave";
-    };
-  };
+{
+  home.sessionVariables.BROWSER = "brave";
   imports = [
+    ./common.nix
     ./packages.nix
     ./file.nix
-    ./xdg.nix
-
-    ./nvim
     ./emacs
-    ./starship.nix
-    ./file-manager/yazi.nix
     ./file-manager/thunar.nix
     ./ghostty.nix
-    ./git.nix
-    ./shell/zsh.nix
-    ./shell/utils.nix
     ./hypr
     ./fcitx5
     ./wofi.nix
@@ -31,7 +16,5 @@
 
     ./uindows.nix
     ./ui_roid.nix
-    ./ms-office.nix
   ];
-  programs.home-manager.enable = true;
 }

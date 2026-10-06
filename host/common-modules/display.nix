@@ -1,10 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: let
-  sddm-uindows = inputs.uindows-themes.packages.${pkgs.stdenv.hostPlatform.system}.sddm-uindows-theme;
-in {
+{pkgs, ...}: {
   services.xserver = {
     enable = true;
     displayManager.lightdm.enable = false;
@@ -22,8 +16,8 @@ in {
     theme = "sddm-uindows-theme";
     package = pkgs.kdePackages.sddm;
   };
-  environment.systemPackages = [
-    sddm-uindows
+  environment.systemPackages = with pkgs; [
+    sddm-uindows-theme
   ];
 
   programs.hyprland = {

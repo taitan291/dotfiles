@@ -1,0 +1,20 @@
+{
+  imports = [
+    ./i18n.nix
+    ./users.nix
+    ./fonts.nix
+    ./boot.nix
+    ./display.nix
+    ./audio.nix
+    ./bluetooth.nix
+    ./services.nix
+    ./udev.nix
+    ./environment.nix
+    ./nix.nix
+    ./system.nix
+    ./nix_ld.nix
+    ./battery.nix
+    ./overlays.nix
+    ./graphics.nix
+  ];
+}

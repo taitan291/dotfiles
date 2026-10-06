@@ -1,4 +1,6 @@
-{...}: {
+{
+  imports = [./keymaps.nix];
+
   programs.nixvim = {
     plugins = {
       typescript-tools.enable = true;

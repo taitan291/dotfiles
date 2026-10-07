@@ -13,6 +13,7 @@
     ./discord.nix
     ./wlogout
     ./time.nix
+    ./claude.nix
 
     ./uindows.nix
     ./ui_roid.nix

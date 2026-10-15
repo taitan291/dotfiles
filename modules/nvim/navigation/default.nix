@@ -59,6 +59,9 @@
           };
         };
       };
+      smart-splits = {
+        enable = true;
+      };
     };
   };
   imports = [

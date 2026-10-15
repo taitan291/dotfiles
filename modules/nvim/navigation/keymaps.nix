@@ -54,6 +54,38 @@
           silent = true;
         };
       }
+      {
+        mode = "n";
+        key = "<leader>es";
+        action = ":split ";
+        options = {
+          desc = "ファイルを指定して横分割";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>ev";
+        action = ":vsplit ";
+        options = {
+          desc = "ファイルを指定して横分割";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>ns";
+        action = "<cmd>new<cr>";
+        options = {
+          desc = "新規ファイルを横分割で開く";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>nv";
+        action = "<cmd>vnew<cr>";
+        options = {
+          desc = "新規ファイルを縦分割で開く";
+        };
+      }
     ];
   };
 }

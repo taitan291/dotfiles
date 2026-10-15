@@ -13,7 +13,6 @@
     prismlauncher
     # vscode
     codex
-
     bitwarden-desktop
   ];
 }

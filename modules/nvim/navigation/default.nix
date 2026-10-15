@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   programs.nixvim = {
     plugins = {
       telescope = {
@@ -59,10 +59,22 @@
           };
         };
       };
-      smart-splits = {
+      smart-splits.enable = true;
+      which-key = {
         enable = true;
+        settings = {
+          preset = "modern"; # "classic" / "modern" / "helix"
+          delay = 300;
+        };
       };
     };
+    extraConfigLua = ''
+      require("winshift").setup({
+        highlight_moving_win = true,
+        focused_hl_group = "Visual",
+      })
+    '';
+    extraPlugins = [pkgs.vimPlugins.winshift-nvim];
   };
   imports = [
     ./keymaps.nix

@@ -70,22 +70,57 @@
           desc = "ファイルを指定して横分割";
         };
       }
-      {
-        mode = "n";
-        key = "<leader>ns";
-        action = "<cmd>new<cr>";
-        options = {
-          desc = "新規ファイルを横分割で開く";
-        };
-      }
-      {
-        mode = "n";
-        key = "<leader>nv";
-        action = "<cmd>vnew<cr>";
-        options = {
-          desc = "新規ファイルを縦分割で開く";
-        };
-      }
     ];
+    plugins = {
+      hydra = {
+        enable = true;
+        hydras = [
+          {
+            name = "Window";
+            mode = "n";
+            body = "<leader>w";
+
+            config = {
+              invoke_on_body = true;
+              hint.type = "window";
+            };
+
+            # heads は [ キー 実行内容 オプション ] のリスト
+            heads = [
+              # 移動
+              ["h" {__raw = "function() require('smart-splits').move_cursor_left() end";}]
+              ["j" {__raw = "function() require('smart-splits').move_cursor_down() end";}]
+              ["k" {__raw = "function() require('smart-splits').move_cursor_up() end";}]
+              ["l" {__raw = "function() require('smart-splits').move_cursor_right() end";}]
+
+              # リサイズ
+              ["H" {__raw = "function() require('smart-splits').resize_left() end";}]
+              ["J" {__raw = "function() require('smart-splits').resize_down() end";}]
+              ["K" {__raw = "function() require('smart-splits').resize_up() end";}]
+              ["L" {__raw = "function() require('smart-splits').resize_right() end";}]
+
+              # 分割・整理
+              ["v" "<C-w>v"]
+              ["s" "<C-w>s"]
+              ["n" "<cmd>new<cr>"]
+              ["N" "<cmd>vnew<cr>"]
+              ["=" "<C-w>="]
+              ["q" "<cmd>close<cr>"]
+
+              # 入れ替え
+              ["m" "<cmd>WinShift<cr>"] # 入れ替えモード
+              ["x" "<cmd>WinShift swap<cr>"] # 入れ替え
+
+              # モードを抜ける
+              ["<Esc>" null {exit = true;}]
+            ];
+          }
+        ];
+        settings = {
+          exit = false; # ヘッドを押してもモードを抜けない(標準)
+          timeout = false; # 時間で自動的に抜けない
+        };
+      };
+    };
   };
 }

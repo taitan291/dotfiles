@@ -43,6 +43,10 @@
       url = "git+https://github.com/TaiTan291/assistant-ui.git";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    rskk = {
+      url = "github:taitan291/rskk.git";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {flake-parts, ...}:

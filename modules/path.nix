@@ -16,6 +16,5 @@
     ./claude.nix
 
     ./uindows.nix
-    ./ui_roid.nix
   ];
 }

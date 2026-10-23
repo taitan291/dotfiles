@@ -14,5 +14,8 @@
     # vscode
     codex
     bitwarden-desktop
+
+    assistant-ui
+    rskk-wayland
   ];
 }

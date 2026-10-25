@@ -35,6 +35,10 @@
       url = "github:taitan291/dotNixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    dotEmacsd = {
+      url = "github:taitan291/dotEmacsd";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     rskk = {
       url = "github:taitan291/rskk";
       inputs.nixpkgs.follows = "nixpkgs";

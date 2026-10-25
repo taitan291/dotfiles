@@ -31,20 +31,20 @@
       url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    uindows-themes = {
-      url = "git+https://github.com/TaiTan291/UindowsOS-themes.git";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    assistant-ui = {
-      url = "git+https://github.com/TaiTan291/assistant-ui.git";
+    dotNixvim = {
+      url = "github:taitan291/dotNixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     rskk = {
-      url = "github:taitan291/rskk.git";
+      url = "github:taitan291/rskk";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    uindows-themes = {
+      url = "git+https://github.com/taitan291/UindowsOS-themes.git";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    assistant-ui = {
+      url = "git+https://github.com/taitan291/assistant-ui.git";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -107,7 +107,6 @@
                   useGlobalPkgs = true;
                   useUserPackages = true;
                   users.taitan.imports = [
-                    inputs.nixvim.homeModules.nixvim
                     ./host/${host}/home.nix
                   ];
                   extraSpecialArgs = {inherit inputs host;};
@@ -122,7 +121,6 @@
           desktop = Host "desktop";
           wsl = Host "wsl";
         };
-        homeManagerModules.nvim = import ./modules/nvim/default.nix;
       };
     };
 }

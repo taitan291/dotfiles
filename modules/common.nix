@@ -13,7 +13,7 @@ in {
 
   imports = [
     ./xdg.nix
-    ./nvim.nix
+    ./editor.nix
     ./starship.nix
     ./file-manager/yazi.nix
     ./git.nix

@@ -4,7 +4,6 @@
     ./common.nix
     ./packages.nix
     ./file.nix
-    ./emacs
     ./file-manager/thunar.nix
     ./ghostty.nix
     ./hypr
@@ -14,6 +13,7 @@
     ./wlogout
     ./time.nix
     ./claude.nix
+    ./nvim.nix
 
     ./uindows.nix
   ];

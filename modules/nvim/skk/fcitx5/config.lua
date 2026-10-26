@@ -7,10 +7,10 @@ local fcitx5_was_running = false
 vim.api.nvim_create_autocmd("VimEnter", {
 	group = group,
 	callback = function()
-		vim.fn.system({ "pgrep", "-x", "fcitx5" })
+		vim.fn.system({ "pgrep", "-f", "^[^ ]*fcitx5( |$)" })
 		fcitx5_was_running = vim.v.shell_error == 0
 		if fcitx5_was_running then
-			vim.fn.system({ "pkill", "-x", "fcitx5" })
+			vim.fn.system({ "pkill", "-f", "^[^ ]*fcitx5( |$)" })
 		end
 	end,
 })

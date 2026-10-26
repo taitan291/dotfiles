@@ -82,11 +82,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1792956300,
-        "narHash": "sha256-2QuQOoESj8T4tQg1EYxNLVOXKTMGIiCfl8vI3OLZnPE=",
+        "lastModified": 1792987143,
+        "narHash": "sha256-BEBFcz1EfKNovjb39YiVayGjIOCjV3ECJBdGXB1soNI=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "f5adbd1237c64805166272e3fb9d9e3a248a5a1e",
+        "rev": "fdf0106142ae60a47bf666e766dfffca58cc0c1c",
         "type": "github"
       },
       "original": {
@@ -807,11 +807,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789164534,
-        "narHash": "sha256-DoYGPM6QpnYBLWj9gGw6ZwAzIX+HrAVov1BoT+8Jixo=",
+        "lastModified": 1792982269,
+        "narHash": "sha256-5R5CFIKj06qTQevhg/rCFUSAMxfNgdn0oIBL57R7u0Y=",
         "owner": "nix-community",
         "repo": "NixOS-WSL",
-        "rev": "72c92b11bb8289e6651c7fef29cc0a885fd6a255",
+        "rev": "e45b24b7df093299072b13bf3144ed0ee340e769",
         "type": "github"
       },
       "original": {
@@ -972,11 +972,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1792973040,
-        "narHash": "sha256-ehsfyBtUTDu3qAN5m8QkoYr5r2QYdumj3kwRu6cnZks=",
+        "lastModified": 1793004494,
+        "narHash": "sha256-AQraILCNBEQ5TV9UTSkOCu5ExEoqyk9Jw/VuiEXOPqo=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "4ca56335e4501fc519362816e116225ce430ba5f",
+        "rev": "df4a69e3877a2edbd31bf856320c896173fb4a69",
         "type": "github"
       },
       "original": {
@@ -1039,10 +1039,10 @@
       },
       "locked": {
         "lastModified": 1792720816,
-        "narHash": "sha256-WXBJZlMU4X3DBCeWCJ11V9QXDskhDsMnp3gxGaCFB9o=",
+        "narHash": "sha256-BIPsFZSOHRqZoYpc3MWNuFmtuI/RmEcUJsiIE5knVxk=",
         "owner": "taitan291",
         "repo": "rskk",
-        "rev": "1cc9bbe5d74dd509c91f1a7009d6d111b745b25b",
+        "rev": "61802690452787131db4cf98de790801b713e45f",
         "type": "github"
       },
       "original": {
@@ -1211,11 +1211,11 @@
         "treefmt-nix": "treefmt-nix_4"
       },
       "locked": {
-        "lastModified": 1792939354,
-        "narHash": "sha256-ps5BP30gA/+ya9TjvxIwHlDzsd6r5Yt9/Q+zkxH1ZLs=",
+        "lastModified": 1793004941,
+        "narHash": "sha256-I9NUlNDQLTkp3KGLYb/Y4tzmKnBGhsyZ8bkxN85vlBQ=",
         "ref": "refs/heads/main",
-        "rev": "fbbaac3cf17fea91890c1ff1e4d905bcdb6810fe",
-        "revCount": 36,
+        "rev": "111a49ab1bd9bf792a31c7e0c045ba3bbfe8d82f",
+        "revCount": 37,
         "type": "git",
         "url": "https://github.com/taitan291/UindowsOS-themes.git"
       },

@@ -34,7 +34,8 @@ in {
   config = lib.mkMerge [
     {programs.emacs-twist.enable = lib.mkDefault true;}
     (lib.mkIf cfg.enable {
-      home.packages = [emacs];
+      home.packages = [emacs pkgs.skkDictionaries.l pkgs.nixd];
+      xdg.configFile."emacs/init.el".source = ./init.el;
       xdg.configFile."emacs/lisp".source = ./lisp;
     })
   ];

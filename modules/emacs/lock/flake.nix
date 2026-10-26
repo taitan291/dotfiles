@@ -37,6 +37,18 @@
       repo = "magit";
       type = "github";
     };
+    nix-mode = {
+      flake = false;
+      owner = "NixOS";
+      repo = "nix-mode";
+      type = "github";
+    };
+    reformatter = {
+      flake = false;
+      owner = "purcell";
+      repo = "emacs-reformatter";
+      type = "github";
+    };
     with-editor = {
       flake = false;
       owner = "magit";

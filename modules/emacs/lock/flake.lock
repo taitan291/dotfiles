@@ -96,6 +96,38 @@
         "type": "github"
       }
     },
+    "nix-mode": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1786383652,
+        "narHash": "sha256-nn2p22JCvKv1nC1Qqgl2Jxu+808zmho38vJFoW17zaQ=",
+        "owner": "NixOS",
+        "repo": "nix-mode",
+        "rev": "2c77e7e0b7540efbb20ccaee3557ef90a5dc77f0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nix-mode",
+        "type": "github"
+      }
+    },
+    "reformatter": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1781870287,
+        "narHash": "sha256-UyjV9ODjPQ2IewC6OHfrANHU+FNvGhbZESUUmUfeSco=",
+        "owner": "purcell",
+        "repo": "emacs-reformatter",
+        "rev": "2bd8818f3f2119a3876e574a437495214c87bc81",
+        "type": "github"
+      },
+      "original": {
+        "owner": "purcell",
+        "repo": "emacs-reformatter",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "catppuccin-theme": "catppuccin-theme",
@@ -104,6 +136,8 @@
         "llama": "llama",
         "magit": "magit",
         "magit-section": "magit-section",
+        "nix-mode": "nix-mode",
+        "reformatter": "reformatter",
         "with-editor": "with-editor"
       }
     },

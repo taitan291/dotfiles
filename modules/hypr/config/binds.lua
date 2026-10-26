@@ -11,6 +11,8 @@ hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd("firefox"))
 hl.bind("SUPER + M", hl.dsp.exec_cmd("missioncenter"))
 hl.bind("SUPER + X", hl.dsp.exec_cmd("wlogout"))
 hl.bind("SUPER + SHIFT + J", hl.dsp.layout("togglesplit"))
+-- スタートメニュー（長押しで表示 / 短押しでトグル）
+hl.bind("SUPER + U", hl.dsp.global("uindows:startmenu-hold"))
 
 -- 機能ショートカット
 

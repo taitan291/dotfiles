@@ -1,6 +1,6 @@
 {inputs, ...}: {
   imports = [
-    inputs.dotNixvim.homeModules.nvim
+    ./nvim
     inputs.dotEmacsd.homeModules.emacs
   ];
 

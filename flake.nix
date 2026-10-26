@@ -31,8 +31,8 @@
       url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    dotNixvim = {
-      url = "github:taitan291/dotNixvim";
+    nixvim = {
+      url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     dotEmacsd = {
@@ -111,6 +111,7 @@
                   useGlobalPkgs = true;
                   useUserPackages = true;
                   users.taitan.imports = [
+                    inputs.nixvim.homeModules.nixvim
                     ./host/${host}/home.nix
                   ];
                   extraSpecialArgs = {inherit inputs host;};
@@ -125,6 +126,7 @@
           desktop = Host "desktop";
           wsl = Host "wsl";
         };
+        homeManagerModules.nvim = import ./modules/nvim/default.nix;
       };
     };
 }

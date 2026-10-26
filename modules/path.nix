@@ -13,7 +13,8 @@
     ./wlogout
     ./time.nix
     ./claude.nix
-    ./editor.nix
+    ./nvim
+    ./emacs
 
     ./uindows.nix
   ];

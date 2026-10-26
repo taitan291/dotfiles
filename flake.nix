@@ -35,9 +35,18 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    dotEmacsd = {
-      url = "github:taitan291/dotEmacsd";
+    twist.url = "github:emacs-twist/twist.nix";
+    emacs-overlay = {
+      url = "github:nix-community/emacs-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    melpa = {
+      url = "github:melpa/melpa";
+      flake = false;
+    };
+    gnu-elpa = {
+      url = "github:elpa-mirrors/elpa";
+      flake = false;
     };
     rskk = {
       url = "github:taitan291/rskk";

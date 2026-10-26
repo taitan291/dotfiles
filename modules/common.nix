@@ -13,7 +13,6 @@ in {
 
   imports = [
     ./xdg.nix
-    ./editor.nix
     ./starship.nix
     ./file-manager/yazi.nix
     ./git.nix

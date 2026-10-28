@@ -3,6 +3,7 @@
     fastfetch
 
     mission-center
+    nwg-displays
     btop
 
     #anki

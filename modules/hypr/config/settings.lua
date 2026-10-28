@@ -28,3 +28,4 @@ hl.config({
 		enforce_permissions = true,
 	},
 })
+hl.permission("/nix/store/.*sunshine.*", "screencopy", "allow")

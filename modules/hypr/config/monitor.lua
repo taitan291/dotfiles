@@ -8,10 +8,21 @@ hl.monitor({
 hl.monitor({
 	output = "HDMI-A-1",
 	mode = "preferred",
-	position = "auto",
+	position = "auto-right",
 	scale = 1,
-	mirror = "eDP-1",
 })
+
+-- Sunshine用の仮想ディスプレイ(物理画面の拡張)
+hl.monitor({
+	output = "HEADLESS-1",
+	mode = "1652x1128@60",
+	position = "auto-right",
+	scale = 1,
+})
+
+hl.on("hyprland.start", function()
+	hl.exec_cmd("hyprctl output create headless HEADLESS-1")
+end)
 
 hl.config({
 	xwayland = {

@@ -15,6 +15,7 @@
     ./claude.nix
     ./nvim
     ./emacs
+    ./sunshine.nix
 
     ./uindows.nix
   ];

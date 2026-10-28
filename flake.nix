@@ -95,6 +95,11 @@
         };
         formatter = config.treefmt.build.wrapper;
 
+        # nix run .#lock / .#update で modules/emacs/lock を更新する
+        apps = (import ./modules/emacs/env.nix {inherit pkgs inputs;}).makeApps {
+          lockDirName = "modules/emacs/lock";
+        };
+
         pre-commit.settings = {
           hooks = {
             treefmt.enable = true;

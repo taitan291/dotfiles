@@ -12,7 +12,8 @@
   imports = [
     ./hardware-configuration.nix
     ../common-modules
-    # ./modules/fingerprint.nix
     ../../modules/steam
+    # ./modules/fingerprint.nix
+    ./modules/sunshine.nix
   ];
 }

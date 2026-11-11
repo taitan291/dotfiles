@@ -2,6 +2,7 @@
   environment.systemPackages = with pkgs; [
     qpwgraph
     wiremix
+    pipewire.jack # pw-jack ラッパー用
   ];
 
   services.pipewire = {
@@ -9,7 +10,6 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    jack.enable = true;
     wireplumber.enable = true;
 
     wireplumber.extraConfig.bluetoothEnhancements = {

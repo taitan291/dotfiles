@@ -15,7 +15,7 @@ hl.monitor({
 -- Sunshine用の仮想ディスプレイ(物理画面の拡張)
 hl.monitor({
 	output = "HEADLESS-1",
-	mode = "1652x1128@60",
+	mode = "1770x1230@60",
 	position = "auto-right",
 	scale = 1,
 })

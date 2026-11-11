@@ -7,16 +7,18 @@
     btop
 
     #anki
-    brave
     #slack
     wine
     librsvg
     prismlauncher
     # vscode
-    codex
+    # codex
     bitwarden-desktop
+    brave
 
     assistant-ui
     rskk-wayland
+
+    tigervnc
   ];
 }

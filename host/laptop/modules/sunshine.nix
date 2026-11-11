@@ -6,7 +6,7 @@
     openFirewall = false;
     settings = {
       capture = "wlr";
-      output_name = "HEADLESS-1"; # 仮想ディスプレイの出力名。番号指定(1)は現行版では一致せずeDP-1(ミラー)にフォールバックする
+      output_name = "HEADLESS-1";
     };
     applications.apps = [
       {

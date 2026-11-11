@@ -20,11 +20,12 @@
       treesitter = {
         enable = true;
         settings = {
-          ensure_installed = ["svelte" "html" "css" "javascript" "typescript"];
+          ensure_installed = ["svelte" "html" "css" "javascript" "typescript" "typst"];
           highlight.enable = true;
         };
         grammarPackages = [
           config.programs.nixvim.plugins.treesitter.package.builtGrammars.svelte
+          config.programs.nixvim.plugins.treesitter.package.builtGrammars.typst
         ];
       };
       mini = {

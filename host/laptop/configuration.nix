@@ -15,5 +15,8 @@
     ../../modules/steam
     # ./modules/fingerprint.nix
     ./modules/sunshine.nix
+    # nixpkgs版はavahiの廃止済みオプションを使うので差し替え
+    ./modules/sunshine-module.nix
   ];
+  disabledModules = ["services/networking/sunshine.nix"];
 }

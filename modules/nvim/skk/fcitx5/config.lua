@@ -15,6 +15,30 @@ vim.api.nvim_create_autocmd("VimEnter", {
 	end,
 })
 
+-- フォーカスが外れた時(別workspaceへ移動など)はfcitx5を起動する
+vim.api.nvim_create_autocmd("FocusLost", {
+	group = group,
+	callback = function()
+		if not fcitx5_was_running then
+			return
+		end
+		vim.fn.system({ "pgrep", "-f", "^[^ ]*fcitx5( |$)" })
+		if vim.v.shell_error ~= 0 then
+			vim.fn.jobstart({ "fcitx5", "-d" }, { detach = true })
+		end
+	end,
+})
+
+-- フォーカスが戻ってきた時はfcitx5を停止する
+vim.api.nvim_create_autocmd("FocusGained", {
+	group = group,
+	callback = function()
+		if fcitx5_was_running then
+			vim.fn.system({ "pkill", "-f", "^[^ ]*fcitx5( |$)" })
+		end
+	end,
+})
+
 -- Neovimから離れた時(元々起動していた場合のみ復帰する)
 vim.api.nvim_create_autocmd("VimLeave", {
 	group = group,

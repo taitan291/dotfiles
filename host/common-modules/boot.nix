@@ -13,7 +13,7 @@
       configurationLimit = 5;
     };
   };
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
 
   boot.plymouth = {
     enable = true;
@@ -33,4 +33,13 @@
     "rd.udev.log_level=3"
     "udev.log_priority=3"
   ];
+  boot.kernel.sysctl = {
+    "vm.swappiness" = 120;
+    "vm.page-cluster" = 0;
+  };
+  zramSwap = {
+    enable = true;
+    algorithm = "zstd";
+    memoryPercent = 50;
+  };
 }

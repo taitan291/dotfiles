@@ -56,6 +56,10 @@
       url = "git+https://github.com/taitan291/UindowsOS-themes.git";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    claude-desktop = {
+      url = "github:k3d3/claude-desktop-linux-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     assistant-ui = {
       url = "git+https://github.com/taitan291/assistant-ui.git";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -140,7 +144,7 @@
           desktop = Host "desktop";
           wsl = Host "wsl";
         };
-        homeManagerModules.nvim = import ./modules/nvim/default.nix;
+        homeModules.nvim = import ./modules/nvim/default.nix;
       };
     };
 }

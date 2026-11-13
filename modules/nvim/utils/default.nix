@@ -4,9 +4,6 @@
   ...
 }: {
   programs.nixvim = {
-    # extraPlugins = with pkgs.vimPlugins; [
-    #   tobira
-    # ];
     plugins = {
       toggleterm = {
         enable = true;
@@ -27,6 +24,19 @@
           config.programs.nixvim.plugins.treesitter.package.builtGrammars.svelte
           config.programs.nixvim.plugins.treesitter.package.builtGrammars.typst
         ];
+      };
+      treesitter-context = {
+        enable = true;
+        settings = {
+          line_numbers = true;
+          max_lines = 3;
+          min_window_height = 0;
+          mode = "cursor";
+          multiline_threshold = 20;
+          separator = "-";
+          trim_scope = "outer";
+          zindex = 20;
+        };
       };
       mini = {
         enable = true;
@@ -64,12 +74,62 @@
           window_overlap_clear_enabled = true;
         };
       };
+      zen-mode = {
+        enable = true;
+        settings = {
+          window = {
+            backdrop = 0.95;
+            width = 120;
+            height = 1;
+            options = {
+              signcolumn = "no";
+              number = false;
+              relativenumber = false;
+              cursorline = false;
+              foldcolumn = "0";
+              list = false;
+            };
+          };
+          plugins = {
+            options = {
+              enabled = true;
+              ruler = false;
+              showcmd = false;
+            };
+            gitsigns.enabled = false;
+            tmux.enabled = false;
+            twilight.enabled = false;
+          };
+          on_open = ''
+            function(win)
+              vim.opt.relativenumber = false
+            end
+          '';
+          on_close = ''
+            function(win)
+              vim.opt.relativenumber = true
+            end
+          '';
+        };
+      };
+      nvim-ufo = {
+        enable = true;
+        settings = {
+          provider_selector = ''
+            function(bufnr, filetype, buftype)
+              return { "treesitter", "indent" }
+            end
+          '';
+          open_fold_hl_timeout = 150;
+        };
+      };
     };
   };
   imports = [
     ./keymaps.nix
 
     ./unicode
+    ./jk
     # ./tobira
   ];
 }

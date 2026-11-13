@@ -29,6 +29,11 @@
       signcolumn = "yes"; # 診断表示で画面がガタつかないよう、サイン列を常に表示する
       cursorline = true; # カーソルのある行をハイライトする
       scrolloff = 6; # カーソルの上下に最低n行の余白を残してスクロールする
+
+      foldcolumn = "1";
+      foldlevel = 99;
+      foldlevelstart = 99;
+      foldenable = true;
     };
     globals.mapleader = " ";
   };

@@ -17,5 +17,13 @@ final: prev: {
           rev = "681388ff25aaf287ca2c6c8d93a55016de4ec6d3";
         };
       };
+
+      accelerated-jk = prev.vimUtils.buildVimPlugin {
+        name = "accelerated-jk";
+        src = builtins.fetchGit {
+          url = "https://github.com/rainbowhxch/accelerated-jk.nvim";
+          rev = "8fb5dad4ccc1811766cebf16b544038aeeb7806f";
+        };
+      };
     };
 }

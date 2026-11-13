@@ -37,6 +37,27 @@
           silent = true;
         };
       }
+      {
+        mode = "n";
+        key = "<Leader>z";
+        action = "<cmd>ZenMode<CR>";
+        options = {
+          desc = "Toggle Zen Mode";
+          silent = true;
+        };
+      }
+      {
+        mode = "n";
+        key = "zR";
+        action.__raw = "require('ufo').openAllFolds";
+        options.desc = "Open all folds";
+      }
+      {
+        mode = "n";
+        key = "zM";
+        action.__raw = "require('ufo').closeAllFolds";
+        options.desc = "Close all folds";
+      }
     ];
   };
 }

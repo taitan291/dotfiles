@@ -82,6 +82,9 @@
           };
         };
       };
+      noice = {
+        enable = true;
+      };
     };
   };
   imports = [

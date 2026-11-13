@@ -1266,11 +1266,11 @@
         "treefmt-nix": "treefmt-nix_4"
       },
       "locked": {
-        "lastModified": 1793244253,
-        "narHash": "sha256-58PKbN9xqGfvumXzL3GDzC4eBdh9kVpoWp90i4Xyzw8=",
+        "lastModified": 1794553691,
+        "narHash": "sha256-x8PvQiFfiNyL29+cldvwPzcWArHs6eUSw3peaYqZVAo=",
         "ref": "refs/heads/main",
-        "rev": "18ad62629c5a7ced69ff75bd36ce809d35750e74",
-        "revCount": 38,
+        "rev": "f6e06cbfa0afac03c4a09f7ca3b2f77c3d048d28",
+        "revCount": 41,
         "type": "git",
         "url": "https://github.com/taitan291/UindowsOS-themes.git"
       },
